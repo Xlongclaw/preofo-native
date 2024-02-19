@@ -7,6 +7,7 @@ module.exports = {
         color1: "#F8F8F8",
         color2: "#1C1C1C",
         color3: "#DADADA",
+        color4: "#E3E3E3",
       },
     },
   },

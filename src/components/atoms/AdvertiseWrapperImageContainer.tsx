@@ -6,7 +6,7 @@ export default function AdvertiseWrapperImageContainer() {
   return (
     <View className="flex-row justify-center  mt-2 w-[20rem] overflow-hidden">
       <Image
-        style={{ width: dimensions.width - 10 }}
+        style={{ width: dimensions.width - 24 }}
         resizeMode="contain"
         source={require("../../assets/images/adv.png")}
       />
