@@ -3,7 +3,7 @@ module.exports = function (api) {
   return {
     presets: ["babel-preset-expo"],
     plugins: [
-      // ..other plugins if any
+      ["nativewind/babel"],
       [
         "module-resolver",
         {
@@ -15,7 +15,7 @@ module.exports = function (api) {
             "@containers": "./src/containers/index",
             "@i18n": "./src/i18n/index",
             "@utils": "./src/utils/index",
-            "@images": "./src/images/index",
+            "@images/*": "./src/images/*",
           },
         },
       ],

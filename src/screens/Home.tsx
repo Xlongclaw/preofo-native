@@ -7,8 +7,8 @@ export default function Home({
   navigation: { navigate: (routeName: string) => void };
 }) {
   return (
-    <View>
-      <Text>HomeScreen</Text>
+    <View className="bg-black">
+      <Text className="text-white">HomeScreen</Text>
     </View>
   );
 }
