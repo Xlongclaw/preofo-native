@@ -1,9 +1,8 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, StatusBar } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import {
   CartScreen,
   Home,
-  Logo,
   ProfileScreen,
   RestaurantScreen,
   RestaurantsScreen,
@@ -14,15 +13,30 @@ import { NavigationContainer } from "@react-navigation/native";
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
-    <NavigationContainer>
+    <NavigationContainer
+      theme={{
+        colors: {
+          background: "#f5f5f5",
+          primary: "",
+          border: "",
+          card: "",
+          notification: "",
+          text: "",
+        },
+        dark: false,
+      }}
+    >
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen name="CartScreen" component={CartScreen} />
         <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
         <Stack.Screen name="RestaurantScreen" component={RestaurantScreen} />
         <Stack.Screen name="RestaurantsScreen" component={RestaurantsScreen} />
         <Stack.Screen name="SignIn" component={SignIn} />
-        <Stack.Screen name="Logo" component={Logo} />
       </Stack.Navigator>
     </NavigationContainer>
   );
