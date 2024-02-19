@@ -1,6 +1,15 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
+    "strict": true,
+    "baseUrl": "src",
+    "paths": {
+      "@screens": ["screens/index"],
+      "@components/*": ["components/*"],
+      "@containers": ["containers/index"],
+      "@i18n": ["i18n/index"],
+      "@utils": ["utils/index"],
+      "@images": ["images/index"]
+    }
   }
 }
