@@ -5,7 +5,7 @@ import { restaurantData } from "../constants";
 
 export default function RestaurantContainer() {
   return (
-    <View className="mr-2 mb-12">
+    <View className="mr-2 mb-32">
       {restaurantData.map((restaurant, i) => (
         <RestaurantWrapper key={i} restaurant={restaurant} />
       ))}
