@@ -1,2 +1,3 @@
 import AdvertiseWrapper from "./AdvertiseWrapper";
-export { AdvertiseWrapper };
+import CravingWrapper from "./CravingWrapper";
+export { AdvertiseWrapper, CravingWrapper };

@@ -9,6 +9,7 @@
       "@containers": ["containers/index"],
       "@i18n": ["i18n/index"],
       "@utils": ["utils/index"],
+      "@types": ["types/index"],
       "@images/*": ["assets/images/*"]
     }
   }

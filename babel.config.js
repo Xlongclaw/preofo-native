@@ -15,6 +15,7 @@ module.exports = function (api) {
             "@containers": "./src/containers/index",
             "@i18n": "./src/i18n/index",
             "@utils": "./src/utils/index",
+            "@types": "./src/types/index",
             "@images/*": "./src/assets/images/*",
           },
         },

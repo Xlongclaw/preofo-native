@@ -2,7 +2,7 @@ import { View, StatusBar } from "react-native";
 import React from "react";
 import { Logo, SectionHeading } from "@components/atoms";
 import { AdvertiseWrapper } from "@components/molecules";
-import { OffersContainer } from "@containers";
+import { CravingContainer, OffersContainer } from "@containers";
 
 export default function Home({
   navigation,
@@ -12,12 +12,15 @@ export default function Home({
   return (
     <View
       style={{ paddingTop: StatusBar.currentHeight }}
-      className={`my-3 px-3`}
+      className={`mt-0 pl-2`}
     >
       <Logo />
       <AdvertiseWrapper />
       <SectionHeading heading="Offers just for you" />
       <OffersContainer />
+      <SectionHeading heading="What are you craving for?" />
+      <CravingContainer />
+      <SectionHeading heading="Popular restaurants around you" />
     </View>
   );
 }

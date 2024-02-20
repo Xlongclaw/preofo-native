@@ -7,7 +7,7 @@ import {
 
 export default function AdvertiseWrapper() {
   return (
-    <View className="">
+    <View className="pr-2">
       <AdvertiseWrapperImageContainer />
       <PositionIndicator />
     </View>
