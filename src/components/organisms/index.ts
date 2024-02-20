@@ -1,2 +1,3 @@
 import OffersWrapper from "./OffersWrapper";
-export { OffersWrapper };
+import RestaurantWrapper from "./RestaurantWrapper";
+export { OffersWrapper, RestaurantWrapper };

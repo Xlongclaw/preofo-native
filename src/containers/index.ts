@@ -1,3 +1,4 @@
 import OffersContainer from "./OffersContainer";
 import CravingContainer from "./CravingContainer";
-export { OffersContainer, CravingContainer };
+import RestaurantContainer from "./RestaurantContainer";
+export { OffersContainer, CravingContainer, RestaurantContainer };
