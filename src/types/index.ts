@@ -11,5 +11,14 @@ type cravingDataType = {
   goto: string;
   name: string;
 };
+type restaurantDataType = {
+  name: string;
+  goto: string;
+  tags: Array<string>;
+  prepTime: string;
+  rating: string;
+  reviews: string;
+  images: Array<{ image: any }>;
+};
 
-export { offerDataType, cravingDataType };
+export { offerDataType, cravingDataType, restaurantDataType };

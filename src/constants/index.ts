@@ -1,3 +1,4 @@
 import yourOfferData from "./yourOfferData";
 import cravingData from "./cravingData";
-export { yourOfferData, cravingData };
+import restaurantData from "./restaurantData";
+export { yourOfferData, cravingData, restaurantData };
