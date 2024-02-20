@@ -1,13 +1,25 @@
 import { View } from "react-native";
 import React from "react";
 
-export default function PositionIndicator() {
+export default function PositionIndicator({
+  index,
+  size,
+}: {
+  index: number;
+  size: number;
+}) {
   return (
     <View className="flex-row justify-center gap-2">
-      <View className="bg-color2 rounded-xl w-[12px] h-[5px]"></View>
-      <View className="bg-color3 rounded-xl w-[5px] h-[5px]"></View>
-      <View className="bg-color3 rounded-xl w-[5px] h-[5px]"></View>
-      <View className="bg-color3 rounded-xl w-[5px] h-[5px]"></View>
+      {Array.from({ length: size }).map((x, i) => (
+        <View
+          key={`DOT_${i}`}
+          className={` rounded-xl ${
+            index == i
+              ? "w-[12px] h-[5px] bg-color2"
+              : "w-[5px] h-[5px] bg-color3"
+          } `}
+        ></View>
+      ))}
     </View>
   );
 }

@@ -10,6 +10,9 @@ const restaurantData = [
       {
         image: require("../assets/images/rest1.png"),
       },
+      {
+        image: require("../assets/images/rest2.png"),
+      },
     ],
   },
   {
@@ -22,6 +25,9 @@ const restaurantData = [
     images: [
       {
         image: require("../assets/images/rest2.png"),
+      },
+      {
+        image: require("../assets/images/rest3.png"),
       },
     ],
   },
@@ -36,6 +42,9 @@ const restaurantData = [
       {
         image: require("../assets/images/rest3.png"),
       },
+      {
+        image: require("../assets/images/rest4.png"),
+      },
     ],
   },
   {
@@ -48,6 +57,9 @@ const restaurantData = [
     images: [
       {
         image: require("../assets/images/rest4.png"),
+      },
+      {
+        image: require("../assets/images/rest1.png"),
       },
     ],
   },

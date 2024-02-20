@@ -8,6 +8,8 @@ import {
   OffersContainer,
   RestaurantContainer,
 } from "@containers";
+import { ImageSlider } from "@components/organisms";
+import { restaurantData } from "../constants";
 
 export default function Home({
   navigation,
