@@ -28,10 +28,20 @@ type restaurantDataType = {
   reviews: string;
   images: Array<{ image: any }>;
 };
+type foodItemDataType = {
+  name: string;
+  goto: string;
+  rating: Number;
+  images: Array<any>;
+  price: string;
+  nonVeg: boolean;
+  description: string;
+};
 
 export {
   offerDataType,
   cravingDataType,
   restaurantDataType,
   navigationDataType,
+  foodItemDataType,
 };
