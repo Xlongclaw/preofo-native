@@ -9,7 +9,7 @@ export default function AdvertiseWrapper() {
   return (
     <View className="pr-2">
       <AdvertiseWrapperImageContainer />
-      <PositionIndicator />
+      <PositionIndicator index={2} size={4} />
     </View>
   );
 }

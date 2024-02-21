@@ -11,6 +11,14 @@ type cravingDataType = {
   goto: string;
   name: string;
 };
+
+type navigationDataType = {
+  icon: any;
+  iconSelected: any;
+  title: string;
+  goto: string;
+};
+
 type restaurantDataType = {
   name: string;
   goto: string;
@@ -21,4 +29,9 @@ type restaurantDataType = {
   images: Array<{ image: any }>;
 };
 
-export { offerDataType, cravingDataType, restaurantDataType };
+export {
+  offerDataType,
+  cravingDataType,
+  restaurantDataType,
+  navigationDataType,
+};

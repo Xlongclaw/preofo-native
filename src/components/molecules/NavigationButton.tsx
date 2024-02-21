@@ -1,0 +1,34 @@
+import { View, Text, Image } from "react-native";
+import React from "react";
+import { navigationDataType } from "@types";
+
+export default function NavigationButton({
+  selected,
+  data,
+}: {
+  selected: boolean;
+  data: navigationDataType;
+}) {
+  return (
+    <View
+      className={`flex-row items-center ${
+        selected ? "bg-color2" : "border border-color3/20"
+      }
+     py-3 rounded-[12px] ${selected ? "px-8" : "px-3"}  space-x-2`}
+    >
+      {selected ? (
+        <Image className="w-[23px] h-[23px] " source={data.iconSelected} />
+      ) : (
+        <Image className="w-[23px] h-[23px] " source={data.icon} />
+      )}
+
+      <Text
+        className={`text-xs mt-1 font-medium text-white ${
+          selected ? "text-white" : "text-color2"
+        }`}
+      >
+        {data.title}
+      </Text>
+    </View>
+  );
+}
