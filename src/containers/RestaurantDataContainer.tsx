@@ -3,12 +3,12 @@ import React from "react";
 
 export default function RestaurantDataContainer() {
   return (
-    <View className="flex-col justify-center items-center">
+    <View className="flex-col justify-center items-center space-y-[4px]">
       <Text className="text-xl font-semibold text-color2">Cafe Rouge</Text>
       <Text className="text font-medium text-color2/50">
         French Cuisine • Italian • Fine dine
       </Text>
-      <View className="flex-row gap-3">
+      <View className="flex-row space-x-2">
         <View className="flex-row gap-1 items-center">
           <Image
             className="h-4 w-4"

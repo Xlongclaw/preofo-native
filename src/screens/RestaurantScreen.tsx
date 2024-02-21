@@ -9,6 +9,7 @@ export default function RestaurantScreen() {
     <View style={{ paddingTop: StatusBar.currentHeight }} className={``}>
       <RestaurantHeader />
       <RestaurantDataContainer />
+      <View className="h-[1px] w-full bg-color3/60 my-4"></View>
     </View>
   );
 }
