@@ -63,6 +63,22 @@ const restaurantData = [
       },
     ],
   },
+  {
+    name: "KFC",
+    tags: ["Fried Chicken", "Burger"],
+    prepTime: "20-30 min",
+    rating: "4.7",
+    reviews: "2.7K",
+    goto: "",
+    images: [
+      {
+        image: require("../assets/images/rest4.png"),
+      },
+      {
+        image: require("../assets/images/rest1.png"),
+      },
+    ],
+  },
 ];
 
 export default restaurantData;
