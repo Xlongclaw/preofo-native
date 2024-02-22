@@ -2,6 +2,7 @@ import { View, Text, Image } from "react-native";
 import React from "react";
 import ImageSlider from "./ImageSlider";
 import { foodItemDataType } from "@types";
+import FoodItemWrapperCounter from "@components/molecules/FoodItemWrapperCounter";
 
 export default function FoodItemWrapper({
   foodItem,
@@ -53,9 +54,7 @@ export default function FoodItemWrapper({
         />
       </View>
       <View className="w-full absolute flex-row justify-center items-center bottom-[-8%] ">
-        <Text className="border px-6 py-2 text-xs bg-color1 border-color3 rounded-full font-bold">
-          + Add
-        </Text>
+        <FoodItemWrapperCounter />
       </View>
     </View>
   );
