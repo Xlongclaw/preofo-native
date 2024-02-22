@@ -32,7 +32,11 @@ export default function App() {
           component={Home}
           options={{ headerShown: false, navigationBarColor: "#f5f5f5" }}
         />
-        <Stack.Screen name="CartScreen" component={CartScreen} />
+        <Stack.Screen
+          name="CartScreen"
+          component={CartScreen}
+          options={{ headerShown: false, navigationBarColor: "#f5f5f5" }}
+        />
         <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
         <Stack.Screen
           name="RestaurantScreen"

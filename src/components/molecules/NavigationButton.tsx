@@ -1,6 +1,7 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { navigationDataType } from "@types";
+import { NavigationProp, useNavigation } from "@react-navigation/native";
 
 export default function NavigationButton({
   selected,
@@ -9,8 +10,11 @@ export default function NavigationButton({
   selected: boolean;
   data: navigationDataType;
 }) {
+  const navigation: NavigationProp<any> = useNavigation();
   return (
-    <View
+    <TouchableOpacity
+      activeOpacity={0.9}
+      onPress={() => navigation.navigate(data.goto)}
       className={`flex-row items-center ${
         selected ? "bg-color2" : "border border-color3/20"
       }
@@ -29,6 +33,6 @@ export default function NavigationButton({
       >
         {data.title}
       </Text>
-    </View>
+    </TouchableOpacity>
   );
 }

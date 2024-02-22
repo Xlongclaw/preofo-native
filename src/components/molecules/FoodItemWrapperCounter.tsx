@@ -4,7 +4,11 @@ import React, { useState } from "react";
 export default function FoodItemWrapperCounter() {
   const [count, setCounter] = useState(0);
   return (
-    <View className="border text-xs flex-row items-center justify-center bg-color1 border-color3 rounded-full font-bold">
+    <View
+      className={`border text-xs flex-row items-center justify-center bg-color1 ${
+        count !== 0 ? "border-color2" : "border-color3 "
+      } rounded-full font-bold`}
+    >
       {count !== 0 ? (
         <View className="flex-row justify-center items-center ">
           <TouchableOpacity

@@ -52,6 +52,7 @@ export default function RestaurantMenuBtn() {
         <View className="absolute bg-color1 border-color3 rounded-[20px] border w-[280px] bottom-[80px] left-0">
           {restaurantCategories.map((category, i) => (
             <View
+              key={`CATEGORY_${i}`}
               className={`flex-row justify-between ${
                 i !== restaurantCategories.length - 1 && "border-b"
               } border-color3/30 items-center space-x-10 py-4 px-7`}
