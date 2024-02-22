@@ -8,18 +8,13 @@ import {
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RestaurantMenuBtn } from "@components/organisms";
 
 export default function RestaurantBottomNavigationStrip() {
   const navigation: NativeStackNavigationProp<any> = useNavigation();
   return (
     <View className="absolute bottom-[84px] w-[100vw] bg-color5 flex-row p-2 space-x-2">
-      <View className="bg-color2 flex-row rounded-[20px] px-6 py-6 justify-center items-center space-x-3">
-        <Image
-          className="w-6 h-6"
-          source={require("../assets/images/menu.png")}
-        />
-        <Text className="text-color3 text-xs font-bold">MENU</Text>
-      </View>
+      <RestaurantMenuBtn />
       <View className="border border-color3 rounded-[20px] flex-row justify-between flex-1 bg-color5 pl-5 pr-2 items-center">
         <View className="space-y-[2px]">
           <Text className="text-color2/50 font-semibold text-xs">
