@@ -5,6 +5,7 @@ import RestaurantHeader from "./RestaurantHeader";
 import FoodItemWrapper from "./FoodItemWrapper";
 import RestaurantMenuBtn from "./RestaurantMenuBtn";
 import OrderScreenHeader from "./OrderScreenHeader";
+import OrderItemWrapper from "./OrderItemWrapper";
 
 export {
   OffersWrapper,
@@ -13,5 +14,6 @@ export {
   RestaurantHeader,
   FoodItemWrapper,
   RestaurantMenuBtn,
-  OrderScreenHeader
+  OrderScreenHeader,
+  OrderItemWrapper
 };
