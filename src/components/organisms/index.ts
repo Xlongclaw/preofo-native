@@ -6,6 +6,7 @@ import FoodItemWrapper from "./FoodItemWrapper";
 import RestaurantMenuBtn from "./RestaurantMenuBtn";
 import OrderScreenHeader from "./OrderScreenHeader";
 import OrderItemWrapper from "./OrderItemWrapper";
+import BillSummary from "./BillSummary";
 
 export {
   OffersWrapper,
@@ -15,5 +16,6 @@ export {
   FoodItemWrapper,
   RestaurantMenuBtn,
   OrderScreenHeader,
-  OrderItemWrapper
+  OrderItemWrapper,
+  BillSummary
 };

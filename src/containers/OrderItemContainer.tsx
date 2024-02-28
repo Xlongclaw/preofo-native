@@ -7,7 +7,6 @@ export default function OrderItemContainer() {
     <View className='flex-col mt-2'>
       <OrderItemWrapper/>
       <OrderItemWrapper/>
-      <OrderItemWrapper/>
     </View>
   )
 }

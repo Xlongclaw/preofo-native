@@ -2,7 +2,7 @@ import { View } from "react-native";
 import React from "react";
 import { StatusBar } from "react-native";
 import { OrderScreenHeader } from "@components/organisms";
-import { OrderItemContainer, OrderScreenRestaurantDataContainer } from "@containers";
+import { OrderItemContainer, OrderScreenRestaurantDataContainer, PromoCodeInputContainer } from "@containers";
 
 
 export default function CartScreen() {
@@ -11,6 +11,7 @@ export default function CartScreen() {
       <OrderScreenHeader/>
       <OrderScreenRestaurantDataContainer/>
       <OrderItemContainer/>
+      <PromoCodeInputContainer/>
     </View>
   );
 }
