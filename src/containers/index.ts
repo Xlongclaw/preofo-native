@@ -5,6 +5,8 @@ import NavigationBar from "./NavigationBar";
 import RestaurantDataContainer from "./RestaurantDataContainer";
 import FoodItemContainer from "./FoodItemContainer";
 import RestaurantBottomNavigationStrip from "./RestaurantBottomNavigationStrip";
+import OrderScreenRestaurantDataContainer from "./OrderScreenRestaurantDataContainer";
+
 export {
   OffersContainer,
   CravingContainer,
@@ -13,4 +15,5 @@ export {
   FoodItemContainer,
   RestaurantDataContainer,
   RestaurantBottomNavigationStrip,
+  OrderScreenRestaurantDataContainer
 };
