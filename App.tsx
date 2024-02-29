@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import {
   CartScreen,
   Home,
+  PlacedOrderScreen,
   ProfileScreen,
   RestaurantScreen,
   RestaurantsScreen,
@@ -41,6 +42,11 @@ export default function App() {
         <Stack.Screen
           name="RestaurantScreen"
           component={RestaurantScreen}
+          options={{ headerShown: false, navigationBarColor: "#f5f5f5" }}
+        />
+        <Stack.Screen
+          name="PlacedOrderScreen"
+          component={PlacedOrderScreen}
           options={{ headerShown: false, navigationBarColor: "#f5f5f5" }}
         />
         <Stack.Screen name="RestaurantsScreen" component={RestaurantsScreen} />

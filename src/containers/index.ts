@@ -8,6 +8,7 @@ import RestaurantBottomNavigationStrip from "./RestaurantBottomNavigationStrip";
 import OrderScreenRestaurantDataContainer from "./OrderScreenRestaurantDataContainer";
 import OrderItemContainer from "./OrderItemContainer";
 import PromoCodeInputContainer from "./PromoCodeInputContainer";
+import PaymentContainer from "./PaymentContainer";
 
 export {
   OffersContainer,
@@ -19,5 +20,6 @@ export {
   RestaurantBottomNavigationStrip,
   OrderScreenRestaurantDataContainer,
   OrderItemContainer,
-  PromoCodeInputContainer
+  PromoCodeInputContainer,
+  PaymentContainer
 };
