@@ -8,6 +8,8 @@ import OrderScreenHeader from "./OrderScreenHeader";
 import OrderItemWrapper from "./OrderItemWrapper";
 import BillSummary from "./BillSummary";
 import OrderSummary from "./OrderSummary";
+import OffersCard from "./OffersCard";
+import RestaurantWrapperImageContainer from "./RestaurantWrapperImageContainer";
 
 export {
   OffersWrapper,
@@ -19,5 +21,7 @@ export {
   OrderScreenHeader,
   OrderItemWrapper,
   BillSummary,
-  OrderSummary
+  OrderSummary,
+  OffersCard,
+  RestaurantWrapperImageContainer
 };

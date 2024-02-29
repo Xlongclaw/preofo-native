@@ -4,37 +4,49 @@ import { PositionIndicator } from "@components/atoms";
 import { restaurantDataType } from "@types";
 import ImageSlider from "./ImageSlider";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
+import OffersCard from "./OffersCard";
+import RestaurantWrapperImageContainer from "./RestaurantWrapperImageContainer";
 
+/**
+ * This component displays the restaurant Details provided through
+ * component props.
+ *
+ * @param restaurant contains a particular restaurant's data.
+ * @returns a JSX element that displays Restaurant Data.
+ */
 export default function RestaurantWrapper({
   restaurant,
 }: {
   restaurant: restaurantDataType;
 }) {
+  /**
+   * currentImageIndex - It is a state variable that contains the
+   * index of the dispalyed restaurant image.
+   */
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  /**
+   * This function replaces the value of the currentImageIndex
+   * with the value of index passed as argument.
+   * @param index - new value of currentImageIndex state variable.
+   */
   const changeImageIndex = (index: number) => {
     setCurrentImageIndex(index);
   };
+
+  /**
+   * Accuiring to navigate to different Screens in the Navigation stack .
+   */
   const navigation: NavigationProp<any> = useNavigation();
   return (
     <TouchableWithoutFeedback
       onPress={() => navigation.navigate("RestaurantScreen")}
     >
       <View className="border rounded-[40px] py-[15px] items-center overflow-hidden border-color3 mx-0 mb-4">
-        <View className="overflow-hidden w-[89vw] rounded-[27px] relative">
-          <ImageSlider
-            controlImageIndex={changeImageIndex}
-            images={restaurant.images}
-          />
-          <View className="bg-color1 absolute h-[35px] right-4 bottom-4 rounded-full flex-row items-center px-2 space-x-2">
-            <Image
-              className="w-[16px] h-[16px]"
-              source={require("../../assets/images/offer.png")}
-            />
-            <Text className="text-[10px] font-bold text-color2/80 mr-2">
-              2 Offers
-            </Text>
-          </View>
-        </View>
+        <RestaurantWrapperImageContainer
+          controlImageIndex={changeImageIndex}
+          restaurant={restaurant}
+        />
         <View className=" flex-row justify-between w-[100%] px-6 mt-4">
           <View className="flex-col ">
             <Text className="text-base font-bold">{restaurant.name}</Text>
