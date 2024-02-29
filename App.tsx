@@ -2,6 +2,7 @@ import { StyleSheet, StatusBar } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import {
   CartScreen,
+  GetStarted,
   Home,
   PlacedOrderScreen,
   ProfileScreen,
@@ -50,7 +51,16 @@ export default function App() {
           options={{ headerShown: false, navigationBarColor: "#f5f5f5" }}
         />
         <Stack.Screen name="RestaurantsScreen" component={RestaurantsScreen} />
-        <Stack.Screen name="SignIn" component={SignIn} />
+        <Stack.Screen
+          name="SignIn"
+          component={SignIn}
+          options={{ headerShown: false, navigationBarColor: "#f5f5f5" }}
+        />
+        <Stack.Screen
+          name="GetStarted"
+          component={GetStarted}
+          options={{ headerShown: false, navigationBarColor: "#f5f5f5" }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

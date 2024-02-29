@@ -15,7 +15,7 @@ const navBarData = [
     title: "Profile",
     icon: require("../assets/images/profile3.png"),
     iconSelected: require("../assets/images/explore.png"),
-    goto: "SignIn",
+    goto: "GetStarted",
   },
 ];
 
