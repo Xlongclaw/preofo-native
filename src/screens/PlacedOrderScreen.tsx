@@ -1,10 +1,14 @@
-import { View, Text, StatusBar } from 'react-native'
-import React from 'react'
+import { View, Text, StatusBar } from "react-native";
+import React from "react";
+import OrderPlacedHeader from "@components/organisms/OrderPlacedHeader";
 
 export default function PlacedOrderScreen() {
   return (
-    <View style={{ paddingTop: StatusBar.currentHeight }}>
-      <Text>PlacedOrderScreen</Text>
+    <View
+      className="px-2"
+      style={{ paddingTop: StatusBar.currentHeight }}
+    >
+      <OrderPlacedHeader/>
     </View>
-  )
+  );
 }

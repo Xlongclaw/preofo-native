@@ -13,7 +13,7 @@ export default function CartScreen() {
   return (
     <View className="relative" style={{ paddingTop: StatusBar.currentHeight }}>
       <OrderScreenHeader />
-      <ScrollView className="mb-[160px  h-[77vh]">
+      <ScrollView showsVerticalScrollIndicator={false} className="mb-[160px  h-[77vh]">
         <OrderScreenRestaurantDataContainer />
         <OrderItemContainer />
         <PromoCodeInputContainer />
