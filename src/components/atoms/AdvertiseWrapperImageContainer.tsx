@@ -1,15 +1,14 @@
-import { View, Image, Dimensions } from "react-native";
+import { Image } from "react-native";
 import React from "react";
-const dimensions = Dimensions.get("window");
 
+/**
+ * @returns returns the restaurant Advertisement Image
+ */
 export default function AdvertiseWrapperImageContainer() {
   return (
-    <View className="flex-row justify-center w-[20rem] overflow-hidden">
-      <Image
-        style={{ width: dimensions.width - 16 }}
-        resizeMode="contain"
-        source={require("../../assets/images/adv.png")}
-      />
-    </View>
+    <Image
+      className="w-full h-32 my-3 rounded-3xl overflow-hidden"
+      source={require("../../assets/images/adv1.png")}
+    />
   );
 }

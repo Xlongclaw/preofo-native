@@ -41,17 +41,10 @@ type foodItemDataType = {
   description: string;
 };
 
-type NavigationScreenType = Array<{
-  name: string;
-  elementToRender: any;
-  options: NativeStackNavigationOptions;
-}>;
-
 export {
   offerDataType,
   cravingDataType,
   restaurantDataType,
   navigationDataType,
   foodItemDataType,
-  NavigationScreenType,
 };

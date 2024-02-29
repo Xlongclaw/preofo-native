@@ -8,7 +8,7 @@ const defaultTheme = {
     primary: "",
     border: "",
     card: "",
-    notification: "",
+    notification: "#f5f5f5",
     text: "",
   },
   dark: false,

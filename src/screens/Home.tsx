@@ -1,7 +1,6 @@
-import { ScrollView, StatusBar, Text, View } from "react-native";
-import { StatusBar as ExpoStatusBar } from "expo-status-bar";
+import { ScrollView, StatusBar, View } from "react-native";
 import React from "react";
-import { Logo, SectionHeading } from "@components/atoms";
+import { Logo, SectionHeading, TextHeading } from "@components/atoms";
 import { AdvertiseWrapper } from "@components/molecules";
 import {
   CravingContainer,
@@ -10,28 +9,31 @@ import {
   RestaurantContainer,
 } from "@containers";
 
-export default function Home({
-  navigation,
-}: {
-  navigation: { navigate: (routeName: string) => void };
-}) {
+/**
+ * This component renders the home Page of the Application.
+ * @returns a JSX element that render Home Screen
+ */
+export default function Home() {
   return (
-    <View className="relative">
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        style={{ paddingTop: StatusBar.currentHeight }}
-        className={`mt-0 pl-2`}
-      >
-        <ExpoStatusBar backgroundColor="#f5f5f5" style="auto" />
+    <View className="relative" style={{ paddingTop: StatusBar.currentHeight }}>
+      <ScrollView showsVerticalScrollIndicator={false} className={`mt-0 pl-2`}>
         <Logo />
         <AdvertiseWrapper />
-        <SectionHeading heading="Offers just for you" />
-        <OffersContainer />
+
+        {/* The Offer Section displays different offers for the user
+        Uncomment the Below two line to add it to the HomeScreen */}
+
+        {/* <SectionHeading heading="Offers just for you" /> */}
+        {/* <OffersContainer /> */}
+
+        {/* The Craving Section displays a list of different food items 
+        giving use the choice to select what he want to eat the most
+        Uncomment the Below two line to add it to the HomeScreen */}
+
         {/* <SectionHeading heading="What are you craving for?" /> */}
         {/* <CravingContainer /> */}
-        <Text className="text-base text-center mt-5 mb-3 mr-2 justify-center font-black text-color2/60">
-          Our Restaurants
-        </Text>
+
+        <TextHeading title="Our Restaurants" />
         <RestaurantContainer />
       </ScrollView>
       <NavigationBar />
