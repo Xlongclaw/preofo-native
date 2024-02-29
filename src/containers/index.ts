@@ -9,6 +9,7 @@ import OrderScreenRestaurantDataContainer from "./OrderScreenRestaurantDataConta
 import OrderItemContainer from "./OrderItemContainer";
 import PromoCodeInputContainer from "./PromoCodeInputContainer";
 import PaymentContainer from "./PaymentContainer";
+import OrderStatusContainer from "./OrderStatusContainer";
 
 export {
   OffersContainer,
@@ -21,5 +22,6 @@ export {
   OrderScreenRestaurantDataContainer,
   OrderItemContainer,
   PromoCodeInputContainer,
-  PaymentContainer
+  PaymentContainer,
+  OrderStatusContainer
 };

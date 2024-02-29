@@ -27,8 +27,8 @@ export default function Home({
         <AdvertiseWrapper />
         <SectionHeading heading="Offers just for you" />
         <OffersContainer />
-        <SectionHeading heading="What are you craving for?" />
-        <CravingContainer />
+        {/* <SectionHeading heading="What are you craving for?" /> */}
+        {/* <CravingContainer /> */}
         <Text className="text-base text-center mt-5 mb-3 mr-2 justify-center font-black text-color2/60">
           Our Restaurants
         </Text>

@@ -2,6 +2,7 @@ import { View, Text, StatusBar } from "react-native";
 import React from "react";
 import OrderPlacedHeader from "@components/organisms/OrderPlacedHeader";
 import { OrderSummary } from "@components/organisms";
+import { OrderStatusContainer } from "@containers";
 
 export default function PlacedOrderScreen() {
   return (
@@ -11,6 +12,7 @@ export default function PlacedOrderScreen() {
     >
       <OrderPlacedHeader/>
       <OrderSummary/>
+      <OrderStatusContainer/>
     </View>
   );
 }
