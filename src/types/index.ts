@@ -1,3 +1,6 @@
+import { NativeStackNavigationOptions } from "@react-navigation/native-stack";
+import React from "react";
+
 type offerDataType = {
   title: string;
   price: string;
@@ -38,10 +41,17 @@ type foodItemDataType = {
   description: string;
 };
 
+type NavigationScreenType = Array<{
+  name: string;
+  elementToRender: any;
+  options: NativeStackNavigationOptions;
+}>;
+
 export {
   offerDataType,
   cravingDataType,
   restaurantDataType,
   navigationDataType,
   foodItemDataType,
+  NavigationScreenType,
 };

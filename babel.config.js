@@ -11,6 +11,7 @@ module.exports = function (api) {
           extensions: [".js", ".ts", ".jsx", ".tsx", ".json"],
           alias: {
             "@screens": "./src/screens/index",
+            "@screens/*": "./src/screens/*",
             "@components/*": "./src/components/*",
             "@containers": "./src/containers/index",
             "@i18n": "./src/i18n/index",

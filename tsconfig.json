@@ -5,6 +5,7 @@
     "baseUrl": "src",
     "paths": {
       "@screens": ["screens/index"],
+      "@screens/*": ["screens/*"],
       "@components/*": ["components/*"],
       "@containers": ["containers/index"],
       "@i18n": ["i18n/index"],
