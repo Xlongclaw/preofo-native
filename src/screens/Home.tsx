@@ -8,6 +8,8 @@ import {
   OffersContainer,
   RestaurantContainer,
 } from "@containers";
+import { useFetch } from "hooks";
+import { getAllCategories } from "sanity/sanity-queries";
 
 /**
  * This component renders the home Page of the Application.
