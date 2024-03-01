@@ -8,7 +8,7 @@ const ImageSlider = ({
   images,
   controlImageIndex,
 }: {
-  images: Array<{ image: any }>;
+  images: Array<string>;
   controlImageIndex: (index: number) => void;
 }) => {
   const [index, setIndex] = useState(0);
@@ -28,7 +28,7 @@ const ImageSlider = ({
     >
       {images.map((image, index) => (
         <View key={index} style={styles.slide}>
-          <Image source={image.image} style={styles.image} />
+          <Image src={image} style={styles.image} />
         </View>
       ))}
     </Swiper>

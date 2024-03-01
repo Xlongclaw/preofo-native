@@ -1,7 +1,7 @@
 import { View, TouchableWithoutFeedback } from "react-native";
 import React, { useState } from "react";
 import { PositionIndicator } from "@components/atoms";
-import { restaurantDataType } from "@types";
+import { restaurantDataType, restaurantDataType2 } from "@types";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import RestaurantWrapperImageContainer from "./RestaurantWrapperImageContainer";
 import {
@@ -41,7 +41,7 @@ export default function RestaurantWrapper({
    */
   const navigation: NavigationProp<any> = useNavigation();
   return (
-    <TouchableWithoutFeedback  onPress={() => navigation.navigate("RestaurantScreen")}>
+    <TouchableWithoutFeedback  onPress={() => navigation.navigate("RestaurantScreen",{restaurantId:restaurant._id})}>
       <View className="border rounded-[40px] py-[15px] items-center overflow-hidden border-color3 mx-0 mb-4">
         <RestaurantWrapperImageContainer
           controlImageIndex={changeImageIndex}

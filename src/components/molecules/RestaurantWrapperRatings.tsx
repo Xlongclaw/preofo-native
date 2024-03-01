@@ -13,7 +13,7 @@ export default function RestaurantWrapperRatings({
   reviews,rating
 }: {
   reviews: string;
-  rating:string
+  rating:number
 }) {
   return (
     <View>

@@ -6,6 +6,7 @@
     "paths": {
       "@screens": ["screens/index"],
       "@screens/*": ["screens/*"],
+      "@constants": ["constants/index"],
       "@components/*": ["components/*"],
       "@containers": ["containers/index"],
       "@i18n": ["i18n/index"],

@@ -9,7 +9,7 @@ import React from 'react'
  * @param prepTime contains preparation time of a particular restaurant.
  * @returns a JSX element that displays Restaurant Preperation Time.
  */
-export default function RestaurantPreparationTimeContainer({prepTime}:{prepTime:string}) {
+export default function RestaurantPreparationTimeContainer({minprepTime,maxPrepTime}:{minprepTime:number,maxPrepTime:number}) {
   return (
     <View className="flex-row items-center space-x-1 mt-2">
         <Image
@@ -17,7 +17,7 @@ export default function RestaurantPreparationTimeContainer({prepTime}:{prepTime:
           source={require("@images/time.png")}
         />
         <Text className="text-[11px] font-bold text-color2/40">
-          {prepTime}
+          {minprepTime} - {maxPrepTime} min
         </Text>
       </View>
   )

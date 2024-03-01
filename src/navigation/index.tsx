@@ -13,9 +13,10 @@ import {
 } from "@screens";
 import { defaultTheme } from "./theme";
 import {baseOptions} from "./options";
+import { RootStackParamList } from "@types";
 
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 /**
  * This component is the the navigation Center of the Application
