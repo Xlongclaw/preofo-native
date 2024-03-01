@@ -23,13 +23,25 @@ type navigationDataType = {
 };
 
 type restaurantDataType = {
+  _id:string
   name: string;
   goto: string;
   tags: Array<string>;
-  prepTime: string;
-  rating: string;
+  minPrepTime: number;
+  maxPrepTime: number;
+  rating: number;
   reviews: string;
-  images: Array<{ image: any }>;
+  images: Array<string>;
+};
+
+type restaurantDataType2 = {
+  name: string;
+  // goto: string;
+  // tags: Array<string>;
+  // prepTime: string;
+  rating: number;
+  reviews: string;
+  images: Array<any>;
 };
 type foodItemDataType = {
   name: string;
@@ -47,4 +59,5 @@ export {
   restaurantDataType,
   navigationDataType,
   foodItemDataType,
+  restaurantDataType2
 };

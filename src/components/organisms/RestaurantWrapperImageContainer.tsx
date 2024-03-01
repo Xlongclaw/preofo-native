@@ -2,7 +2,7 @@ import { View } from "react-native";
 import React, { useEffect, useState } from "react";
 import ImageSlider from "./ImageSlider";
 import OffersCard from "./OffersCard";
-import { restaurantDataType } from "@types";
+import { restaurantDataType, restaurantDataType2 } from "@types";
 
 export default function RestaurantWrapperImageContainer({
   restaurant,

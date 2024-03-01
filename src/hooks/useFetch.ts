@@ -1,25 +1,26 @@
 import { useEffect, useState } from "react";
 
-const useFetch = (
-  method: "POST" | "GET" | "PUT" | "DELETE",
-  url: string,
-  body = {}
-) => {
-  const [data, setData] = useState<any>({});
+const useFetch = (options: {
+  method: "POST" | "GET" | "PUT" | "DELETE";
+  url: string;
+  type: "normal" | "sanity";
+}) => {
+  const [data, setData] = useState<any>();
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   useEffect(() => {
     setIsLoading(true);
-    fetch(url, {
-      method: method,
+    fetch(options.url, {
+      method: options.method,
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(body),
+      body: JSON.stringify({}),
     })
       .then((response) => response.json())
       .then((responseData) => {
-        setData(responseData);
+        if (options.type == "sanity") setData(responseData.result);
+        else setData(responseData);
       })
       .catch((err) => setError(err))
       .finally(() => setIsLoading(false));

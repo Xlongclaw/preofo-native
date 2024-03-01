@@ -1,6 +1,6 @@
 import { View, Text } from "react-native";
 import React from "react";
-import { restaurantDataType } from "@types";
+import { restaurantDataType, restaurantDataType2 } from "@types";
 import RestaurantPreparationTimeContainer from "./RestaurantPreparationTimeContainer";
 
 /**
@@ -26,7 +26,8 @@ export default function RestaurantWrapperDetailsContainer({
           </Text>
         ))}
       </View>
-      <RestaurantPreparationTimeContainer prepTime={restaurant.prepTime}/>
+      <RestaurantPreparationTimeContainer minprepTime={restaurant.minPrepTime} 
+      maxPrepTime={restaurant.maxPrepTime}/>
     </View>
   );
 }

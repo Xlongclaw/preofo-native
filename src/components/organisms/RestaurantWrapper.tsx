@@ -1,7 +1,7 @@
 import { View, TouchableWithoutFeedback } from "react-native";
 import React, { useState } from "react";
 import { PositionIndicator } from "@components/atoms";
-import { restaurantDataType } from "@types";
+import { restaurantDataType, restaurantDataType2 } from "@types";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import RestaurantWrapperImageContainer from "./RestaurantWrapperImageContainer";
 import {

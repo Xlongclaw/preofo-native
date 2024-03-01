@@ -70,6 +70,12 @@ export default defineType({
       of: [{type: 'image'}],
     },
     {
+      name: 'tags',
+      title: `Restaurant Tags`,
+      type: 'array',
+      of: [{type: 'string'}],
+    },
+    {
       name: 'dishes',
       title: `Dishes`,
       type: 'reference',

@@ -12,6 +12,7 @@ module.exports = function (api) {
           alias: {
             "@screens": "./src/screens/index",
             "@screens/*": "./src/screens/*",
+            "@constants": "./src/constants/index",
             "@components/*": "./src/components/*",
             "@containers": "./src/containers/index",
             "@i18n": "./src/i18n/index",
