@@ -34,15 +34,6 @@ type restaurantDataType = {
   images: Array<string>;
 };
 
-type restaurantDataType2 = {
-  name: string;
-  // goto: string;
-  // tags: Array<string>;
-  // prepTime: string;
-  rating: number;
-  reviews: string;
-  images: Array<any>;
-};
 type foodItemDataType = {
   name: string;
   goto: string;
@@ -53,11 +44,35 @@ type foodItemDataType = {
   description: string;
 };
 
+type DishType = {
+  _id:string,
+  image:string,
+  price:number,
+  rating:number,
+  name:string,
+  prepTime:number;
+  available:boolean,
+  nonVeg:boolean
+  description:string
+}
+
+type RootStackParamList = {
+  Home: undefined;
+  RestaurantScreen: { restaurantId:string};
+  RestaurantsScreen: undefined;
+  SignIn: undefined;
+  GetStarted: undefined;
+  CartScreen: undefined;
+  PlacedOrderScreen: undefined;
+  ProfileScreen: undefined;
+};
+
 export {
   offerDataType,
   cravingDataType,
   restaurantDataType,
   navigationDataType,
   foodItemDataType,
-  restaurantDataType2
+  RootStackParamList,
+  DishType
 };

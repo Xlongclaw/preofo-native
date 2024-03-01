@@ -14,7 +14,7 @@ export default defineType({
     defineField({
       name: 'description',
       title: 'Description of Dish',
-      type: 'text',
+      type: 'string',
     }),
     defineField({
       name: 'prepTime',
