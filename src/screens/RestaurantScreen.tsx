@@ -48,13 +48,13 @@ export default function RestaurantScreen() {
 
     return (
       <View style={{ paddingTop: StatusBar.currentHeight }} className={`mr-2`}>
-        {/* <RestaurantHeader name={data.name} scrollPosition={scrollPosition} /> */}
+        <RestaurantHeader data={data} isLoading={isLoading} scrollPosition={scrollPosition} />
         <ScrollView
           onScroll={(event) => handleScroll(event)}
           showsVerticalScrollIndicator={false}
           className="max-h-[78vh]"
         >
-          {/* <RestaurantDataContainer name={data.name} /> */}
+          <RestaurantDataContainer isLoading={isLoading} data={data} />
           <View className="h-[1px] w-full bg-color3/40 mt-4"></View>
           <FoodItemContainer isLoading={isLoading} data={data} />
         </ScrollView>
