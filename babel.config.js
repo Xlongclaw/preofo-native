@@ -15,6 +15,7 @@ module.exports = function (api) {
             "@constants": "./src/constants/index",
             "@components/*": "./src/components/*",
             "@containers": "./src/containers/index",
+            "@hooks": "./src/hooks/index",
             "@i18n": "./src/i18n/index",
             "@utils": "./src/utils/index",
             "@types": "./src/types/index",

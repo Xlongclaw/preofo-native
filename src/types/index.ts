@@ -1,6 +1,3 @@
-import { NativeStackNavigationOptions } from "@react-navigation/native-stack";
-import React from "react";
-
 type offerDataType = {
   title: string;
   price: string;
@@ -57,6 +54,13 @@ type DishType = {
   description:string,
 }
 
+
+type AdvertisementDataType = {
+  _id:string,
+  image:string,
+  title:string
+}
+
 type RootStackParamList = {
   Home: undefined;
   RestaurantScreen: { restaurantId:string};
@@ -75,5 +79,6 @@ export {
   navigationDataType,
   foodItemDataType,
   RootStackParamList,
-  DishType
+  DishType,
+  AdvertisementDataType
 };

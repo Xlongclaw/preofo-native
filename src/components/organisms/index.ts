@@ -10,6 +10,7 @@ import BillSummary from "./BillSummary";
 import OrderSummary from "./OrderSummary";
 import OffersCard from "./OffersCard";
 import RestaurantWrapperImageContainer from "./RestaurantWrapperImageContainer";
+import AdvertiseWrapper from "./AdvertiseWrapper";
 
 export {
   OffersWrapper,
@@ -23,5 +24,6 @@ export {
   BillSummary,
   OrderSummary,
   OffersCard,
-  RestaurantWrapperImageContainer
+  RestaurantWrapperImageContainer,
+  AdvertiseWrapper
 };

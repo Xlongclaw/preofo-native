@@ -9,6 +9,7 @@
       "@constants": ["constants/index"],
       "@components/*": ["components/*"],
       "@containers": ["containers/index"],
+      "@hooks": ["hooks/index"],
       "@i18n": ["i18n/index"],
       "@utils": ["utils/index"],
       "@types": ["types/index"],

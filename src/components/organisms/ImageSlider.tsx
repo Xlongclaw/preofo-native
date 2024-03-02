@@ -2,14 +2,15 @@ import React, { useEffect, useState } from "react";
 import { View, Image, StyleSheet, Dimensions } from "react-native";
 import Swiper from "react-native-swiper";
 
-const { width } = Dimensions.get("window");
 
 const ImageSlider = ({
   images,
   controlImageIndex,
+  height
 }: {
   images: Array<string>;
   controlImageIndex: (index: number) => void;
+  height:number
 }) => {
   const [index, setIndex] = useState(0);
   useEffect(() => {
@@ -22,8 +23,8 @@ const ImageSlider = ({
       removeClippedSubviews={false}
       showsPagination={false}
       onIndexChanged={(index) => setIndex(index)}
-      className="h-[180px]"
-      style={styles.wrapper}
+      className=" overflow-hidden"
+      style={[styles.wrapper, {height:height}]}
       autoplay
     >
       {images.map((image, index) => (
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   image: {
-    width: width - 42,
+    width: '100%',
     flex: 1,
   },
 });

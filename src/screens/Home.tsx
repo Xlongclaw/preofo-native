@@ -1,15 +1,14 @@
-import { ScrollView, StatusBar, View } from "react-native";
+import { Dimensions, ScrollView, StatusBar, View } from "react-native";
 import React from "react";
 import { Logo, SectionHeading, TextHeading } from "@components/atoms";
-import { AdvertiseWrapper } from "@components/molecules";
 import {
   CravingContainer,
   NavigationBar,
   OffersContainer,
   RestaurantContainer,
 } from "@containers";
-import { useFetch } from "hooks";
-import { getAllCategories } from "sanity/sanity-queries";
+import { AdvertiseWrapper } from "@components/organisms";
+const { height } = Dimensions.get("window");
 
 /**
  * This component renders the home Page of the Application.
@@ -17,8 +16,12 @@ import { getAllCategories } from "sanity/sanity-queries";
  */
 export default function Home() {
   return (
-    <View className="relative" style={{ paddingTop: StatusBar.currentHeight }}>
-      <ScrollView showsVerticalScrollIndicator={false} className={`mt-0 pl-2`}>
+    <View style={{ paddingTop: StatusBar.currentHeight }}>
+      <ScrollView
+        style={{ minHeight: height - StatusBar.currentHeight! }}
+        showsVerticalScrollIndicator={false}
+        className={`mt-0 pl-2`}
+      >
         <Logo />
         <AdvertiseWrapper />
 

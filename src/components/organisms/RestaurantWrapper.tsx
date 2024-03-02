@@ -10,7 +10,7 @@ import {
 } from "@components/molecules";
 import Skeleton from "@components/atoms/Skeleton";
 import { getAllRestaurants, getRestaurantById } from "sanity/sanity-queries";
-import { useFetch } from "hooks";
+import { useFetch } from "@hooks";
 
 /**
  * This component displays the restaurant Details provided through

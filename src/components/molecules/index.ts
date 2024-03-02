@@ -1,4 +1,3 @@
-import AdvertiseWrapper from "./AdvertiseWrapper";
 import CravingWrapper from "./CravingWrapper";
 import RestaurantImageContainer from "./RestaurantImageContainer";
 import FoodItemWrapperCounter from "./FoodItemWrapperCounter";
@@ -7,7 +6,6 @@ import RestaurantPreparationTimeContainer from "./RestaurantPreparationTimeConta
 import RestaurantWrapperRatings from "./RestaurantWrapperRatings";
 
 export {
-  AdvertiseWrapper,
   CravingWrapper,
   RestaurantImageContainer,
   FoodItemWrapperCounter,

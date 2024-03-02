@@ -24,7 +24,7 @@ export default function RestaurantContainer() {
    */
   if (!isLoading)
     return (
-      <View className="mr-2 mb-32">
+      <View className="mr-2 mb-28">
         {data.map((restaurantId) => (
           /**
            * Rendering all restaurants through piping data from constant
