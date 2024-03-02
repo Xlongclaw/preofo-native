@@ -28,7 +28,7 @@ export default function RestaurantContainer() {
            * restaurantData file into the RestaurantWrapper.
            * Here, The Key has to be replaced by Restaurant_ID coming from CMS.
            */
-          <RestaurantWrapper key={restaurant._id} restaurant={restaurant} />
+          <RestaurantWrapper isLoading={isLoading} key={restaurant._id} restaurant={restaurant} />
         ))}
       </View>
     );

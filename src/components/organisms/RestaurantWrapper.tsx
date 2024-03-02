@@ -1,13 +1,14 @@
 import { View, TouchableWithoutFeedback } from "react-native";
 import React, { useState } from "react";
 import { PositionIndicator } from "@components/atoms";
-import { restaurantDataType, restaurantDataType2 } from "@types";
+import { restaurantDataType } from "@types";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import RestaurantWrapperImageContainer from "./RestaurantWrapperImageContainer";
 import {
   RestaurantWrapperDetailsContainer,
   RestaurantWrapperRatings,
 } from "@components/molecules";
+import Skeleton from "@components/atoms/Skeleton";
 
 /**
  * This component displays the restaurant Details provided through
@@ -18,8 +19,10 @@ import {
  */
 export default function RestaurantWrapper({
   restaurant,
+  isLoading
 }: {
   restaurant: restaurantDataType;
+  isLoading:boolean
 }) {
   /**
    * currentImageIndex - It is a state variable that contains the
@@ -47,7 +50,6 @@ export default function RestaurantWrapper({
           controlImageIndex={changeImageIndex}
           restaurant={restaurant}
         />
-
         {/* Bottom container of restaurant Wrapper */}
         <View className=" flex-row justify-between w-[100%] px-6 mt-4">
           {/* Left Bottom container of restaurant wrapper that displays NAME,

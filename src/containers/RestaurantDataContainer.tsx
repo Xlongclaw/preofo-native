@@ -2,7 +2,7 @@ import { View, Text, Image } from "react-native";
 import React from "react";
 
 export default function RestaurantDataContainer({name}: {
-  name:string
+  name?:string
   tags?: Array<string>;
   minPrepTime?: number;
   maxPrepTime?: number;
