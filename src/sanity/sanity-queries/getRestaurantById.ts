@@ -12,6 +12,10 @@ export default function getRestaurantById(id:string) {
       latitude,
       longitude,
       tags,
+      "foodCategories":foodCategories[]{category,dishes[]->{
+          ...,
+          "image":image.asset->url
+        }},
         dishes[]->{
           ...,
           "image":image.asset->url

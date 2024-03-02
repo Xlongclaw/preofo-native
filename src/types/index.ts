@@ -32,6 +32,7 @@ type restaurantDataType = {
   rating: number;
   reviews: string;
   images: Array<string>;
+  foodCategories:Array<{category:string,dishes:Array<DishType>}>
 };
 
 type foodItemDataType = {
@@ -53,7 +54,7 @@ type DishType = {
   prepTime:number;
   available:boolean,
   nonVeg:boolean
-  description:string
+  description:string,
 }
 
 type RootStackParamList = {

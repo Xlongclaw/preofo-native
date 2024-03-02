@@ -10,6 +10,7 @@ import OrderItemContainer from "./OrderItemContainer";
 import PromoCodeInputContainer from "./PromoCodeInputContainer";
 import PaymentContainer from "./PaymentContainer";
 import OrderStatusContainer from "./OrderStatusContainer";
+import CategoryList from "./CategoryList";
 
 export {
   OffersContainer,
@@ -23,5 +24,6 @@ export {
   OrderItemContainer,
   PromoCodeInputContainer,
   PaymentContainer,
-  OrderStatusContainer
+  OrderStatusContainer,
+  CategoryList
 };

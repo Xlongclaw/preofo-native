@@ -9,7 +9,7 @@ export default defineType({
       name: 'name',
       title: 'Restaurant Name',
       type: 'string',
-      validation: (rule) => rule.required()
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'description',
@@ -20,31 +20,31 @@ export default defineType({
       name: 'address',
       title: `Restaurant's Address`,
       type: 'string',
-      validation: (rule) => rule.required()
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'latitude',
       title: `Restaurant's Latitude`,
       type: 'number',
-      validation: (rule) => rule.required()
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'longitude',
       title: `Restaurant's Longitude`,
       type: 'number',
-      validation: (rule) => rule.required()
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'minPrepTime',
       title: `Minimum PrepTime in minutes`,
       type: 'number',
-      validation: (rule) => rule.required()
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'maxPrepTime',
       title: `Maximum PrepTime in minutes`,
       type: 'number',
-      validation: (rule) => rule.required()
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'open',
@@ -56,7 +56,7 @@ export default defineType({
       name: 'rating',
       title: `Restaurant's Rating`,
       type: 'number',
-      validation: (rule) => rule.required().min(0).max(5).error("Enter a value between 1 and 5")
+      validation: (rule) => rule.required().min(0).max(5).error('Enter a value between 1 and 5'),
     }),
     defineField({
       name: 'reviews',
@@ -76,10 +76,28 @@ export default defineType({
       of: [{type: 'string'}],
     },
     {
+      name: 'foodCategories',
+      title: `Food Categories`,
+      type: 'array',
+      of: [{type: 'object',fields:[
+        {
+          name:'category',
+          title:'Food Categories',
+          type:'string'
+        },
+        {
+          name:'dishes',
+          title:'Dishes',
+          type:'array',
+          of:[{type:'reference',to:[{type:'dish'}]}]
+        }
+      ]}],
+    },
+    {
       name: 'dishes',
       title: `Dishes`,
       type: 'array',
-      of: [{type: 'reference',to:[{type:'dish'}]}],
+      of: [{type: 'reference', to: [{type: 'dish'}]}],
     },
   ],
 })

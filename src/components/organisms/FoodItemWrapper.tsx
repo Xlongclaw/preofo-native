@@ -6,7 +6,7 @@ import FoodItemWrapperCounter from "@components/molecules/FoodItemWrapperCounter
 
 export default function FoodItemWrapper({ foodItem }: { foodItem: DishType }) {
   return (
-    <View className="border relative w-full rounded-[40px] flex-row justify-between items-center border-color3 mx-1 p-2 my-3">
+    <View className="border relative w-full rounded-[40px] flex-row justify-between items-center border-color3 p-2 my-3">
       <View className="max-w-[50%] pl-4 space-y-1">
         <View className="flex-row gap-2">
           {foodItem.nonVeg ? (
