@@ -32,6 +32,17 @@ type restaurantDataType = {
   foodCategories:Array<{category:string,dishes:Array<DishType>}>
 };
 
+type RestaurantWrapperFetchedDataType = {
+  _id:string
+  name: string;
+  tags: Array<string>;
+  minPrepTime: number;
+  maxPrepTime: number;
+  rating: number;
+  reviews: string;
+  images: Array<string>;
+};
+
 type foodItemDataType = {
   name: string;
   goto: string;
@@ -80,5 +91,6 @@ export {
   foodItemDataType,
   RootStackParamList,
   DishType,
-  AdvertisementDataType
+  AdvertisementDataType,
+  RestaurantWrapperFetchedDataType
 };

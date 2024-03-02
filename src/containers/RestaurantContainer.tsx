@@ -1,9 +1,7 @@
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import React from "react";
 import { RestaurantWrapper } from "@components/organisms";
-import { useFetch } from "hooks";
-import getAllRestaurants from "sanity/sanity-queries/getAllRestaurants";
-import { restaurantDataType } from "@types";
+import { useFetch } from "@hooks";
 import { getAllRestaurantIds } from "sanity/sanity-queries";
 import { TextHeading } from "@components/atoms";
 import { RestaurantWrapperSkeleton } from "@components/skeletons";
@@ -30,14 +28,17 @@ export default function RestaurantContainer() {
       />
       {!isLoading &&
         data.map((restaurantId) => (
+
           /**
-           * Rendering all restaurants through piping data from constant
-           * restaurantData file into the RestaurantWrapper.
-           * Here, The Key has to be replaced by Restaurant_ID coming from CMS.
+           * Rendering all restaurants through sending restaurantIds to Restaurant Wrappers
            */
           <RestaurantWrapper key={restaurantId} restaurantId={restaurantId} />
         ))}
       {isLoading && (
+
+        /**
+         * Rendering the skeleton if the data is loading.
+         */
         <>
           <RestaurantWrapperSkeleton />
           <RestaurantWrapperSkeleton />
@@ -45,5 +46,4 @@ export default function RestaurantContainer() {
       )}
     </View>
   );
-  // return <RestaurantWrapperSkeleton/>;
 }

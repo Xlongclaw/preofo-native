@@ -5,10 +5,10 @@ import OffersCard from "./OffersCard";
 import { restaurantDataType } from "@types";
 
 export default function RestaurantWrapperImageContainer({
-  restaurant,
+  images,
   controlImageIndex
 }: {
-  restaurant: restaurantDataType;
+  images:Array<string>
   controlImageIndex: (index:number) => void;
 }) {
   /**
@@ -35,7 +35,7 @@ export default function RestaurantWrapperImageContainer({
       <ImageSlider
       height={180}
         controlImageIndex={changeImageIndex}
-        images={restaurant.images}
+        images={images}
       />
       <OffersCard />
     </View>

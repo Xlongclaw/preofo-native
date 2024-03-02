@@ -1,6 +1,6 @@
 import { View, Text } from "react-native";
 import React from "react";
-import { restaurantDataType } from "@types";
+import { RestaurantWrapperFetchedDataType, restaurantDataType } from "@types";
 import RestaurantPreparationTimeContainer from "./RestaurantPreparationTimeContainer";
 import Skeleton from "@components/atoms/Skeleton";
 
@@ -14,7 +14,7 @@ import Skeleton from "@components/atoms/Skeleton";
 export default function RestaurantWrapperDetailsContainer({
   restaurant,
 }: {
-  restaurant: restaurantDataType;
+  restaurant: RestaurantWrapperFetchedDataType;
 }) {
   return (
     <View className=" flex-col ">
