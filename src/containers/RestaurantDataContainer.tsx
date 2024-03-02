@@ -2,12 +2,13 @@ import { View, Text, Image } from "react-native";
 import React from "react";
 
 export default function RestaurantDataContainer({name}: {
-  name?:string
+  name?:string;
   tags?: Array<string>;
   minPrepTime?: number;
   maxPrepTime?: number;
   rating?: number;
 }) {
+
   return (
     <View className="flex-col justify-center items-center space-y-[4px]">
       <Text className="text-xl font-semibold text-color2">{name}</Text>

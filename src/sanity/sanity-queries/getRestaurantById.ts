@@ -21,5 +21,5 @@ export default function getRestaurantById(id:string) {
           ...,
           "image":image.asset->url
         }
-  }`);
+  }[0]`);
 }

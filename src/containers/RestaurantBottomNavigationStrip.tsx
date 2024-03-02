@@ -13,7 +13,7 @@ import { RestaurantMenuBtn } from "@components/organisms";
 export default function RestaurantBottomNavigationStrip() {
   const navigation: NativeStackNavigationProp<any> = useNavigation();
   return (
-    <View className="absolute bottom-[84px] w-[100vw] bg-color5 flex-row p-2 space-x-2">
+    <View className=" w-[100vw] bg-color5 flex-row p-2 space-x-2">
       <RestaurantMenuBtn />
       <View className="border border-color3 rounded-[20px] flex-row justify-between flex-1 bg-color5 pl-5 pr-2 items-center">
         <View className="space-y-[2px]">

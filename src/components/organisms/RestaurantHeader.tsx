@@ -4,10 +4,10 @@ import { NavigationProp, useNavigation } from "@react-navigation/native";
 
 export default function RestaurantHeader({
   scrollPosition,
-  name
+  name,
 }: {
   scrollPosition: number;
-  name?: string;
+  name?: string | undefined;
 }) {
   const navigation: NavigationProp<any> = useNavigation();
   return (
@@ -27,7 +27,8 @@ export default function RestaurantHeader({
           scrollPosition > 120 ? "opacity-100" : "opacity-0"
         } items-center justify-center `}
       >
-        <Text className={` font-bold text-l`}>{name}</Text>
+        <Text className={` font-bold text-l`}>{name}
+          </Text>
         {/* <Text className="text-xs font-semibold text-color2/50">
           French Cusine
         </Text> */}
