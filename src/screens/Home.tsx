@@ -1,6 +1,6 @@
 import { Dimensions, ScrollView, StatusBar, View } from "react-native";
 import React from "react";
-import { Logo, SectionHeading, TextHeading } from "@components/atoms";
+import { Logo, SectionHeading} from "@components/atoms";
 import {
   CravingContainer,
   NavigationBar,
@@ -38,7 +38,6 @@ export default function Home() {
         {/* <SectionHeading heading="What are you craving for?" /> */}
         {/* <CravingContainer /> */}
 
-        <TextHeading title="Our Restaurants" />
         <RestaurantContainer />
       </ScrollView>
       <NavigationBar />

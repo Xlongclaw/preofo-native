@@ -1,2 +1,3 @@
 import AdvertisementWrapperSkeleton from "./AdvertisementWrapperSkeleton";
-export {AdvertisementWrapperSkeleton}
+import RestaurantWrapperSkeleton from "./RestaurantWrapperSkeleton";
+export {AdvertisementWrapperSkeleton,RestaurantWrapperSkeleton}
