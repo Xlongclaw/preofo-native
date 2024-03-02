@@ -48,7 +48,7 @@ export default function RestaurantScreen() {
         <View className="h-[1px] w-full bg-color3/40 mt-4"></View>
         {
           data[0].foodCategories.map((categoryData,i)=>(
-            <FoodItemContainer dishes={categoryData.dishes} expanded={!i} category={categoryData.category} />
+            <FoodItemContainer key={`CATEGORY_${i}`} dishes={categoryData.dishes} expanded={!i} category={categoryData.category} />
           ))
         }
       </ScrollView>
