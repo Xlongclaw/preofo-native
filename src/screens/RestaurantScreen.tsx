@@ -13,7 +13,7 @@ import {
   FoodItemContainer,
 } from "@containers";
 import { RestaurantHeader } from "@components/organisms";
-import { useFetch } from "hooks";
+import { useFetch } from "@hooks";
 import { getRestaurantById } from "sanity/sanity-queries";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { RootStackParamList, restaurantDataType } from "@types";
