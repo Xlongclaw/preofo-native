@@ -5,10 +5,10 @@ import {
   PositionIndicator,
 } from "@components/atoms";
 import { useFetch } from "@hooks";
-import { getAllAdvertisements } from "sanity/sanity-queries";
 import { AdvertisementDataType } from "@types";
 import { AdvertisementWrapperSkeleton } from "@components/skeletons";
 import ImageSlider from "@components/organisms/ImageSlider";
+import fetchAdvertisements from "utils/fetchAdvertisements";
 
 /**
  * This component is a display a group of food advertisement
@@ -18,6 +18,7 @@ import ImageSlider from "@components/organisms/ImageSlider";
  * @returns the advertisement showing container
  */
 export default function AdvertiseWrapper() {
+  const [advertisements, setAdvertisements] = React.useState<any>();
   /**
    * State Variable for storing the currently displayed advertisement Index
    */
@@ -32,42 +33,37 @@ export default function AdvertiseWrapper() {
     setcurrentAdvertisementIndex(i);
   };
 
-  /**
-   * Fetching all advertisements.
-   */
-  const advertisements: {
-    data: Array<AdvertisementDataType>;
-    isLoading: boolean;
-  } = useFetch({
-    method: "POST",
-    type: "sanity",
-    url: getAllAdvertisements(),
-  });
+  React.useEffect(() => {
+    fetchAdvertisements().then((res) => {
+      setAdvertisements(res.data);
+    });
+  }, []);
 
   /**
    * Constructing Advertisement Images Array to feed it to ImageSliler.
    */
-  if (!advertisements.isLoading) {
+  if (advertisements) {
     let advertisementImagesArray: Array<string> = [];
-    for (let i = 0; i < advertisements.data.length; i++) {
-      advertisementImagesArray.push(advertisements.data[i].image);
+    for (let i = 0; i < advertisements.length; i++) {
+      advertisementImagesArray.push(advertisements[i].image.url);
     }
 
-    return (
-      <View className="pr-2">
-        <View className="rounded-[25px] overflow-hidden mb-4 mt-2">
-          <ImageSlider
-            height={160}
-            controlImageIndex={controlImageIndex}
-            images={advertisementImagesArray}
+    if (advertisements)
+      return (
+        <View className="pr-2">
+          <View className="rounded-[25px] overflow-hidden mb-4 mt-2">
+            <ImageSlider
+              height={160}
+              controlImageIndex={controlImageIndex}
+              images={advertisementImagesArray}
+            />
+          </View>
+          <PositionIndicator
+            index={currentAdvertisementIndex}
+            size={advertisementImagesArray.length}
           />
         </View>
-        <PositionIndicator
-          index={currentAdvertisementIndex}
-          size={advertisementImagesArray.length}
-        />
-      </View>
-    );
+      );
   }
   return <AdvertisementWrapperSkeleton />;
 }

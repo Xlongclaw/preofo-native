@@ -9,11 +9,6 @@ import {
   RestaurantWrapperRatings,
 } from "@components/molecules";
 import Skeleton from "@components/atoms/Skeleton";
-import {
-  getAllRestaurants,
-  getRestaurantById,
-  getRestaurantWrapperDataById,
-} from "sanity/sanity-queries";
 import { useFetch } from "@hooks";
 import { RestaurantWrapperSkeleton } from "@components/skeletons";
 import fetchRestaurantById from "utils/fetchRestaurantById";
