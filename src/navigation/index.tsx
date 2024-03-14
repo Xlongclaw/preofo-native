@@ -10,6 +10,7 @@ import {
   RestaurantScreen,
   RestaurantsScreen,
   SignIn,
+  TestPage,
 } from "@screens";
 import { defaultTheme } from "./theme";
 import {baseOptions} from "./options";
@@ -37,6 +38,7 @@ export default function Navigation() {
         <Stack.Screen name="RestaurantsScreen" component={RestaurantsScreen} />
         <Stack.Screen name="SignIn" component={SignIn} options={baseOptions} />
         <Stack.Screen name="GetStarted" component={GetStarted} options={baseOptions}/>
+        <Stack.Screen name="TestPage" component={TestPage} options={baseOptions}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

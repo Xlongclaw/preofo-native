@@ -1,8 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
-import { RestaurantWrapperFetchedDataType, restaurantDataType } from "@types";
+import { RestaurantWrapperFetchedDataType } from "@types";
 import RestaurantPreparationTimeContainer from "./RestaurantPreparationTimeContainer";
-import Skeleton from "@components/atoms/Skeleton";
 
 /**
  * This container displays the restaurant Details provided through
@@ -17,13 +16,13 @@ export default function RestaurantWrapperDetailsContainer({
   restaurant: RestaurantWrapperFetchedDataType;
 }) {
   return (
-    <View className=" flex-col ">
+    <View className=" flex-col w-2/3">
       <Text className="text-base font-bold">{restaurant.name}</Text>
-      <View className="text-[10px] flex-row ">
-        {restaurant.tags.map((tag, i) => (
+      <View className="text-[10px] flex-row flex-wrap">
+        {restaurant.restaurantTags.map((tag, i) => (
           <Text className="font-bold text-color2/40 text-[11px]" key={i}>
-            {tag}
-            {restaurant.tags.length - 1 !== i && " • "}
+            {i<3 && tag}
+            {i<2 && restaurant.restaurantTags.length - 1 !== i && " • "}
           </Text>
         ))}
       </View>

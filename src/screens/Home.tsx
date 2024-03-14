@@ -15,6 +15,7 @@ const { height } = Dimensions.get("window");
  * @returns a JSX element that render Home Screen
  */
 export default function Home() {
+
   return (
     <View style={{ paddingTop: StatusBar.currentHeight }}>
       <ScrollView

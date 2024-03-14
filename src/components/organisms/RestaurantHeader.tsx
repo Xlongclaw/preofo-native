@@ -1,16 +1,14 @@
 import { View, Image, TouchableHighlight, Text } from "react-native";
 import React from "react";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
-import { restaurantDataType } from "@types";
+import { RestaurantWrapperFetchedDataType } from "@types";
 
 export default function RestaurantHeader({
   scrollPosition,
   data,
-  isLoading
 }: {
   scrollPosition: number;
-  isLoading:boolean;
-  data:restaurantDataType
+  data:RestaurantWrapperFetchedDataType
 }) {
   const navigation: NavigationProp<any> = useNavigation();
 
@@ -31,7 +29,7 @@ export default function RestaurantHeader({
           scrollPosition > 120 ? "opacity-100" : "opacity-0"
         } items-center justify-center `}
       >
-        <Text className={` font-bold text-l`}>{ !isLoading && data.name}
+        <Text className={` font-bold text-l`}>{ data.name}
           </Text>
         {/* <Text className="text-xs font-semibold text-color2/50">
           French Cusine

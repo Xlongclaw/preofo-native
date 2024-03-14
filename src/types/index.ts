@@ -20,7 +20,7 @@ type navigationDataType = {
 };
 
 type restaurantDataType = {
-  _id:string
+  _id: string;
   name: string;
   goto: string;
   tags: Array<string>;
@@ -29,18 +29,28 @@ type restaurantDataType = {
   rating: number;
   reviews: string;
   images: Array<string>;
-  foodCategories:Array<{category:string,dishes:Array<DishType>}>
+  foodCategories: Array<{ category: string; dishes: Array<DishType> }>;
 };
 
 type RestaurantWrapperFetchedDataType = {
-  _id:string
+  _id: string;
   name: string;
-  tags: Array<string>;
+  restaurantTags: Array<string>;
+  foodTags: Array<string>;
   minPrepTime: number;
   maxPrepTime: number;
   rating: number;
   reviews: string;
-  images: Array<string>;
+  images: Array<{
+    url: string;
+    signature: string;
+    publicId: string;
+  }>;
+  foodCategories:Array<{
+    name:string,
+    dishIds:Array<string>,
+    _id:string
+  }>
 };
 
 type foodItemDataType = {
@@ -54,33 +64,33 @@ type foodItemDataType = {
 };
 
 type DishType = {
-  _id:string,
-  image:string,
-  price:number,
-  rating:number,
-  name:string,
-  prepTime:number;
-  available:boolean,
-  nonVeg:boolean
-  description:string,
-}
-
+  _id: string;
+  image: string;
+  price: number;
+  rating: number;
+  name: string;
+  prepTime: number;
+  available: boolean;
+  nonVeg: boolean;
+  description: string;
+};
 
 type AdvertisementDataType = {
-  _id:string,
-  image:string,
-  title:string
-}
+  _id: string;
+  image: string;
+  title: string;
+};
 
 type RootStackParamList = {
   Home: undefined;
-  RestaurantScreen: { restaurantId:string};
+  RestaurantScreen: { restaurantId: string,restaurant:RestaurantWrapperFetchedDataType };
   RestaurantsScreen: undefined;
   SignIn: undefined;
   GetStarted: undefined;
   CartScreen: undefined;
   PlacedOrderScreen: undefined;
   ProfileScreen: undefined;
+  TestPage: undefined;
 };
 
 export {
@@ -92,5 +102,5 @@ export {
   RootStackParamList,
   DishType,
   AdvertisementDataType,
-  RestaurantWrapperFetchedDataType
+  RestaurantWrapperFetchedDataType,
 };

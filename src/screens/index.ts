@@ -6,6 +6,7 @@ import RestaurantsScreen from "./RestaurantsScreen";
 import SignIn from "./SignIn";
 import PlacedOrderScreen from "./PlacedOrderScreen";
 import GetStarted from "./GetStarted";
+import TestPage from "./TestPage";
 
 export {
   Home,
@@ -15,5 +16,6 @@ export {
   RestaurantsScreen,
   SignIn,
   PlacedOrderScreen,
-  GetStarted
+  GetStarted,
+  TestPage
 };

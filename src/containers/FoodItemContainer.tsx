@@ -1,26 +1,22 @@
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import React from "react";
-import { restaurantDataType } from "@types";
+import { RestaurantWrapperFetchedDataType} from "@types";
 import FoodCategoryList from "./FoodCategoryList";
 import { FoodItemContainerSkeleton } from "@components/skeletons";
 
 export default function FoodItemContainer({
   data,
-  isLoading,
 }: {
-  data: restaurantDataType;
-  isLoading: boolean;
+  data: RestaurantWrapperFetchedDataType;
 }) {
-
-  if(!isLoading)
   return (
     <View>
       {data.foodCategories.map((categoryData, i) => (
         <FoodCategoryList
           key={`CATEGORY_${i}`}
-          dishes={categoryData.dishes}
+          dishIds={categoryData.dishIds}
           expanded={!i}
-          category={categoryData.category}
+          category={categoryData.name}
         />
       ))}
     </View>

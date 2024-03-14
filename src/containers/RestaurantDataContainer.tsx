@@ -1,29 +1,26 @@
 import { View, Text, Image } from "react-native";
 import React from "react";
-import { restaurantDataType } from "@types";
-import Skeleton from "@components/atoms/Skeleton";
+import { RestaurantWrapperFetchedDataType} from "@types";
 
 export default function RestaurantDataContainer({
   data,
-  isLoading,
 }: {
   name?: string;
   tags?: Array<string>;
   minPrepTime?: number;
   maxPrepTime?: number;
   rating?: number;
-  data: restaurantDataType;
-  isLoading: boolean;
+  data: RestaurantWrapperFetchedDataType;
+
 }) {
-  if (!isLoading)
     return (
       <View className="flex-col justify-center items-center space-y-[4px]">
         <Text className="text-xl font-semibold text-color2">{data.name}</Text>
         <View className="flex-row">
-          {data.tags.map((tag, i) => (
+          {data.restaurantTags.map((tag, i) => (
             <Text className="font-bold text-color2/40 text-xs" key={i}>
-              {tag}
-              {data.tags.length - 1 !== i && " • "}
+              {i<3 &&tag}
+              {i<2 && data.restaurantTags.length - 1 !== i && " • "}
             </Text>
           ))}
         </View>
@@ -50,11 +47,4 @@ export default function RestaurantDataContainer({
         </View>
       </View>
     );
-  return (
-    <View className="justify-center items-center">
-      <Skeleton height={22} width={40} rounded={20} my={4} />
-      <Skeleton height={15} width={60} rounded={20} my={4} />
-      <Skeleton height={15} width={50} rounded={20} my={4} />
-    </View>
-  );
 }
