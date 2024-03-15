@@ -80,7 +80,7 @@ export default function SignInContainer() {
 
   return (
     <View className="px-4 h-screen flex-col mt-32">
-      <BulletHeading subtitle="PARTNER" appName="Preofo" />
+      <BulletHeading subtitle="" appName="Preofo" />
 
       {/* Basically an input Field to get phone number from the user */}
       <PhoneInput

@@ -1,8 +1,8 @@
 import { Text, TouchableOpacity, View } from "react-native";
 import React, { useState } from "react";
 
-export default function FoodItemWrapperCounter() {
-  const [count, setCounter] = useState(0);
+export default function FoodItemWrapperCounter({initialValue=0}:{initialValue?:number}) {
+  const [count, setCounter] = useState(initialValue);
   return (
     <View
       className={`border text-xs flex-row items-center justify-center bg-color1 ${

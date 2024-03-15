@@ -11,7 +11,7 @@ const fetchUserData = async (userToken: string) => {
     const jsonData = await data.json();
     return  jsonData
   } catch (err) {
-    return { code: "USER_DOES_NOT_EXIST" };
+    return { code: "USER_DOES_NOT_EXIST",err };
   }
 };
 export default fetchUserData;

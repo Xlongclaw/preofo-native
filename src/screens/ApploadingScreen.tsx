@@ -30,7 +30,7 @@ export default function AppLoadingScreen({ navigation, route }: Props) {
    */
   React.useEffect(() => {
     userToken &&
-      fetchUserData(userToken).then((res) => {
+      fetchUserData(userToken).then((res) => { 
         if (res.code == "SUCCESS") navigation.navigate("Home");
         else navigation.navigate("SignUp");
       });

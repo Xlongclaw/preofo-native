@@ -9,9 +9,11 @@ import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RestaurantMenuBtn } from "@components/organisms";
+import { RestaurantWrapperFetchedDataType, RootStackParamList } from "@types";
 
-export default function RestaurantBottomNavigationStrip() {
-  const navigation: NativeStackNavigationProp<any> = useNavigation();
+
+export default function RestaurantBottomNavigationStrip({restaurant}:{restaurant:RestaurantWrapperFetchedDataType}) {
+  const navigation: NativeStackNavigationProp<RootStackParamList> = useNavigation();
   return (
     <View className=" w-[100vw] bg-color5 flex-row p-2 space-x-2">
       <RestaurantMenuBtn />
@@ -24,7 +26,7 @@ export default function RestaurantBottomNavigationStrip() {
         </View>
         <TouchableHighlight
           underlayColor={"#dfdfdf"}
-          onPress={() => navigation.navigate("CartScreen")}
+          onPress={() => navigation.navigate("CartScreen",{restaurant:restaurant} )}
           className="p-4 rounded-full"
         >
           <Image

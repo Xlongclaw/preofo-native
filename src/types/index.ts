@@ -81,6 +81,17 @@ type AdvertisementDataType = {
   title: string;
 };
 
+
+type OrderType = {
+  _id: string;
+  restaurantId:string;
+  orderItems:Array<{
+    _id:string,
+    dishId:string,
+    quantity:number
+  }>
+};
+
 type RootStackParamList = {
   Home: undefined;
   RestaurantScreen: { restaurantId: string,restaurant:RestaurantWrapperFetchedDataType };
@@ -88,7 +99,7 @@ type RootStackParamList = {
   SignIn: undefined;
   SignUp: undefined;
   GetStarted: undefined;
-  CartScreen: undefined;
+  CartScreen: { restaurant:{}};
   PlacedOrderScreen: undefined;
   ProfileScreen: undefined;
   TestPage: undefined;
@@ -106,4 +117,5 @@ export {
   DishType,
   AdvertisementDataType,
   RestaurantWrapperFetchedDataType,
+  OrderType
 };

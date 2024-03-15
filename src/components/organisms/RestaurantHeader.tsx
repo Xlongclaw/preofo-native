@@ -38,7 +38,7 @@ export default function RestaurantHeader({
       <View>
         <TouchableHighlight
           underlayColor={"#dfdfdf"}
-          onPress={() => navigation.navigate("CartScreen")}
+          onPress={() => {}}
           className="p-3 rounded-full"
         >
           <Image

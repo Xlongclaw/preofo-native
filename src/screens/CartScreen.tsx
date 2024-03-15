@@ -1,4 +1,4 @@
-import { ScrollView, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import React from "react";
 import { StatusBar } from "react-native";
 import { BillSummary, OrderScreenHeader } from "@components/organisms";
@@ -8,18 +8,47 @@ import {
   PaymentContainer,
   PromoCodeInputContainer,
 } from "@containers";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { OrderType, RootStackParamList } from "@types";
+import fetchOrder from "utils/fetchOrder";
+import retrieveSecureStoreData from "utils/retrieveSecureStoreData";
+type NavigationProps = NativeStackScreenProps<
+  RootStackParamList,
+  "RestaurantScreen"
+>;
 
-export default function CartScreen() {
+export default function CartScreen({ navigation, route }: NavigationProps) {
+  const [orderData, setOrderData] = React.useState<OrderType>();
+
+  React.useEffect(() => {
+    retrieveSecureStoreData("userToken").then((token) => {
+      fetchOrder({
+        restaurantId: route.params.restaurantId,
+        userToken: token!,
+      }).then((res) => {
+        setOrderData(res.data.basket[0]);
+      }).catch((err)=>{
+        console.log(err);
+      });
+    });
+  }, []);
+  if(orderData)
   return (
     <View className="relative" style={{ paddingTop: StatusBar.currentHeight }}>
       <OrderScreenHeader />
-      <ScrollView showsVerticalScrollIndicator={false} className="mb-[160px  h-[77vh]">
-        <OrderScreenRestaurantDataContainer />
-        <OrderItemContainer />
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        className="mb-[160px  h-[77vh]"
+      >
+        <OrderScreenRestaurantDataContainer
+          restaurant={route.params.restaurant}
+        />
+        <OrderItemContainer orderData={orderData} />
         <PromoCodeInputContainer />
         <BillSummary />
       </ScrollView>
-      <PaymentContainer/>
+      <PaymentContainer />
     </View>
   );
+  return <Text>LOADING</Text>
 }

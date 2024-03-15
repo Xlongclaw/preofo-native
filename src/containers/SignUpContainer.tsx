@@ -144,7 +144,7 @@ export default function SignUpContainer() {
   const navigation: NavigationProp<RootStackParamList> = useNavigation();
   return (
     <View className="px-4 h-screen flex-col mt-32">
-      <BulletHeading subtitle="PARTNER" appName="Preofo" />
+      <BulletHeading subtitle="" appName="Preofo" />
 
       {/* Basically an input Field to get phone number from the user with a request OTP button */}
       <PhoneInput

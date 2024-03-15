@@ -49,7 +49,7 @@ export default function RestaurantScreen({
         <View className="h-[1px] w-full bg-color3/40 mt-4"></View>
         <FoodItemContainer data={route.params.restaurant} />
       </ScrollView>
-      <RestaurantBottomNavigationStrip />
+      <RestaurantBottomNavigationStrip restaurant={route.params.restaurant} />
     </View>
   );
 }
