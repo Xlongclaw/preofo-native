@@ -7,6 +7,9 @@ import SignIn from "./SignIn";
 import PlacedOrderScreen from "./PlacedOrderScreen";
 import GetStarted from "./GetStarted";
 import TestPage from "./TestPage";
+import AppLoadingScreen from "./ApploadingScreen";
+import SignUp from "./SignUp";
+import RegisterationScreen from "./RegisterationScreen";
 
 export {
   Home,
@@ -17,5 +20,8 @@ export {
   SignIn,
   PlacedOrderScreen,
   GetStarted,
-  TestPage
+  TestPage,
+  AppLoadingScreen,
+  SignUp,
+  RegisterationScreen
 };

@@ -86,11 +86,14 @@ type RootStackParamList = {
   RestaurantScreen: { restaurantId: string,restaurant:RestaurantWrapperFetchedDataType };
   RestaurantsScreen: undefined;
   SignIn: undefined;
+  SignUp: undefined;
   GetStarted: undefined;
   CartScreen: undefined;
   PlacedOrderScreen: undefined;
   ProfileScreen: undefined;
   TestPage: undefined;
+  AppLoadingScreen:undefined;
+  Registeration: { userToken:string };
 };
 
 export {

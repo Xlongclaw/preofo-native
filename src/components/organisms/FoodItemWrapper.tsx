@@ -2,7 +2,7 @@ import { View, Text, Image } from "react-native";
 import React from "react";
 import FoodItemWrapperCounter from "@components/molecules/FoodItemWrapperCounter";
 import fetchDishById from "utils/fetchDishById";
-import { RestaurantWrapperSkeleton } from "@components/skeletons";
+import { FoodItemWrapperSkeleton  } from "@components/skeletons";
 
 export default function FoodItemWrapper({ id }: { id: string }) {
   const [foodItem, seFoodItem] = React.useState<any>();
@@ -63,5 +63,5 @@ export default function FoodItemWrapper({ id }: { id: string }) {
         </View>
       </View>
     );
-  return <RestaurantWrapperSkeleton />;
+  return <FoodItemWrapperSkeleton/>;
 }

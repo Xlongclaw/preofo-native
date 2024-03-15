@@ -19,7 +19,9 @@
     "@react-native-community/blur": "^4.4.0",
     "@react-navigation/native": "^6.1.10",
     "@react-navigation/native-stack": "^6.9.18",
+    "classnames": "^2.5.1",
     "expo": "~50.0.7",
+    "expo-image-picker": "~14.7.1",
     "expo-status-bar": "~1.11.1",
     "firebase": "^10.8.1",
     "nativewind": "^2.0.11",
@@ -33,7 +35,8 @@
     "react-native-screens": "~3.29.0",
     "react-native-skeleton-content": "^1.0.28",
     "react-native-swiper": "^1.6.0",
-    "expo-image-picker": "~14.7.1"
+    "react-native-toast-message": "^2.2.0",
+    "expo-secure-store": "~12.8.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
