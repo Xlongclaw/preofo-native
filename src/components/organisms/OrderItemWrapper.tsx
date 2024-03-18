@@ -4,6 +4,7 @@ import FoodItemWrapperCounter from "@components/molecules/FoodItemWrapperCounter
 import { DishType } from "@types";
 import fetchDishById from "utils/fetchDishById";
 import getFinalItemPrice from "utils/getFinalItemPrice";
+import retrieveSecureStoreData from "utils/retrieveSecureStoreData";
 
 export default function OrderItemWrapper({
   data,
@@ -17,8 +18,14 @@ export default function OrderItemWrapper({
   const [dish, setDish] = React.useState<DishType>();
 
   React.useEffect(() => {
-    fetchDishById(data.dishId).then((res) => {
-      setDish(res.dish);
+    retrieveSecureStoreData("userToken").then((res) => {
+      fetchDishById({
+        dishId: data.dishId,
+        restaurantId: "",
+        userToken: res!,
+      }).then((res) => {
+        setDish(res.dish);
+      });
     });
   }, []);
 
@@ -72,7 +79,7 @@ export default function OrderItemWrapper({
         </View>
         <View className="space-y-2 items-end">
           <View className="mr-2">
-            <FoodItemWrapperCounter initialValue={data.quantity}/>
+            <FoodItemWrapperCounter initialValue={data.quantity} />
           </View>
           <Text className=" font-bold text-color2/90 py-0 pl-6 pr-8 rounded-l-full">
             ₹
