@@ -46,7 +46,7 @@ export default function FoodCategoryList({
         </TouchableOpacity>
         {expand &&
           dishIds.map((id, i) => {
-            return <FoodItemWrapper id={id} key={`FOOD_ITEM_${i}`} />;
+            return <FoodItemWrapper restaurantId={restaurantId} id={id} key={`FOOD_ITEM_${i}`} />;
           })}
       </View>
     );

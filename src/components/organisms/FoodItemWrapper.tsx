@@ -2,19 +2,30 @@ import { View, Text, Image } from "react-native";
 import React from "react";
 import FoodItemWrapperCounter from "@components/molecules/FoodItemWrapperCounter";
 import fetchDishById from "utils/fetchDishById";
-import { FoodItemWrapperSkeleton  } from "@components/skeletons";
+import { FoodItemWrapperSkeleton } from "@components/skeletons";
+import retrieveSecureStoreData from "utils/retrieveSecureStoreData";
 
-export default function FoodItemWrapper({ id,qty=0 }: { id: string,qty?:number }) {
-  const [foodItem, seFoodItem] = React.useState<any>();
+export default function FoodItemWrapper({
+  id,
+  restaurantId,
+}: {
+  id: string;
+
+  restaurantId: string;
+}) {
+  const [foodItem, setFoodItem] = React.useState<any>();
+  const [qty, setQty] = React.useState(0);
 
   React.useEffect(() => {
-
-    fetchDishById(id).then((res) => {
-      seFoodItem(res.dish);
+    retrieveSecureStoreData("userToken").then((res) => {
+      fetchDishById({ dishId: id, restaurantId, userToken: res! }).then(
+        (res) => {
+          setQty(res.qty);
+          setFoodItem(res.dish);
+        }
+      );
     });
-    
   }, []);
-  
 
   if (foodItem)
     return (
@@ -49,7 +60,10 @@ export default function FoodItemWrapper({ id,qty=0 }: { id: string,qty?:number }
             </View>
           </View>
           <Text className="font-bold text-color2/90">{foodItem.name}</Text>
-          <Text numberOfLines={5} className="text-[11px] font-semibold text-color2/40">
+          <Text
+            numberOfLines={5}
+            className="text-[11px] font-semibold text-color2/40"
+          >
             {foodItem.description}
           </Text>
           <Text className=" font-bold text-color2/90">₹{foodItem.price}</Text>
@@ -66,5 +80,5 @@ export default function FoodItemWrapper({ id,qty=0 }: { id: string,qty?:number }
         </View>
       </View>
     );
-  return <FoodItemWrapperSkeleton/>;
+  return <FoodItemWrapperSkeleton />;
 }
