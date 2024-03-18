@@ -14,7 +14,7 @@ import fetchOrder from "utils/fetchOrder";
 import retrieveSecureStoreData from "utils/retrieveSecureStoreData";
 type NavigationProps = NativeStackScreenProps<
   RootStackParamList,
-  "RestaurantScreen"
+  "CartScreen"
 >;
 
 export default function CartScreen({ navigation, route }: NavigationProps) {
@@ -23,10 +23,10 @@ export default function CartScreen({ navigation, route }: NavigationProps) {
   React.useEffect(() => {
     retrieveSecureStoreData("userToken").then((token) => {
       fetchOrder({
-        restaurantId: route.params.restaurantId,
+        restaurantId: route.params.restaurant._id,
         userToken: token!,
       }).then((res) => {
-        setOrderData(res.data.basket[0]);
+        setOrderData(res.basket[0]);
       }).catch((err)=>{
         console.log(err);
       });
@@ -45,7 +45,7 @@ export default function CartScreen({ navigation, route }: NavigationProps) {
         />
         <OrderItemContainer orderData={orderData} />
         <PromoCodeInputContainer />
-        <BillSummary />
+        <BillSummary orderData={orderData} />
       </ScrollView>
       <PaymentContainer />
     </View>

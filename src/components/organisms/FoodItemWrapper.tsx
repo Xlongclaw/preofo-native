@@ -4,14 +4,17 @@ import FoodItemWrapperCounter from "@components/molecules/FoodItemWrapperCounter
 import fetchDishById from "utils/fetchDishById";
 import { FoodItemWrapperSkeleton  } from "@components/skeletons";
 
-export default function FoodItemWrapper({ id }: { id: string }) {
+export default function FoodItemWrapper({ id,qty=0 }: { id: string,qty?:number }) {
   const [foodItem, seFoodItem] = React.useState<any>();
 
   React.useEffect(() => {
+
     fetchDishById(id).then((res) => {
       seFoodItem(res.dish);
     });
+    
   }, []);
+  
 
   if (foodItem)
     return (
@@ -46,7 +49,7 @@ export default function FoodItemWrapper({ id }: { id: string }) {
             </View>
           </View>
           <Text className="font-bold text-color2/90">{foodItem.name}</Text>
-          <Text className="text-[11px] font-semibold text-color2/40">
+          <Text numberOfLines={5} className="text-[11px] font-semibold text-color2/40">
             {foodItem.description}
           </Text>
           <Text className=" font-bold text-color2/90">₹{foodItem.price}</Text>
@@ -59,7 +62,7 @@ export default function FoodItemWrapper({ id }: { id: string }) {
           />
         </View>
         <View className="w-full absolute flex-row justify-center items-center bottom-[-8%] ">
-          <FoodItemWrapperCounter />
+          <FoodItemWrapperCounter initialValue={qty} />
         </View>
       </View>
     );

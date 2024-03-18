@@ -99,7 +99,7 @@ type RootStackParamList = {
   SignIn: undefined;
   SignUp: undefined;
   GetStarted: undefined;
-  CartScreen: { restaurant:{}};
+  CartScreen: { restaurant:RestaurantWrapperFetchedDataType};
   PlacedOrderScreen: undefined;
   ProfileScreen: undefined;
   TestPage: undefined;

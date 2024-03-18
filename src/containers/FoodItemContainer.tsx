@@ -17,6 +17,7 @@ export default function FoodItemContainer({
           dishIds={categoryData.dishIds}
           expanded={!i}
           category={categoryData.name}
+          restaurantId={data._id}
         />
       ))}
     </View>
