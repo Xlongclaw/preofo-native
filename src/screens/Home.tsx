@@ -21,7 +21,7 @@ export default function Home() {
       <ScrollView
         style={{ minHeight: height - StatusBar.currentHeight! }}
         showsVerticalScrollIndicator={false}
-        className={`mt-0 pl-2`}
+        className={`mt-0 pl-0`}
       >
         <Logo />
         <AdvertiseWrapper />

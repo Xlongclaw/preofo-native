@@ -16,15 +16,15 @@ export default function RestaurantWrapperRatings({
   rating:number
 }) {
   return (
-    <View>
-      <View className=" flex-row items-center space-x-1 pt-6">
+    <View className="flex-col items-end">
+      <View className=" flex-row items-center space-x-1 mt-6 ">
         <Image
           className="w-[12px] h-[12px] mb-1"
           source={require("@images/star.png")}
         />
-        <Text className="text-xs font-semibold">{rating}</Text>
+        <Text className="text-sm  font-semibold">{rating}</Text>
       </View>
-      <Text className="text-[10px] font-bold text-color2/40">
+      <Text className="text-[12px] font-bold text-color2/40">
         {reviews} Ratings
       </Text>
     </View>

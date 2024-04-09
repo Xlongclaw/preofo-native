@@ -1,7 +1,11 @@
-import { View, TouchableWithoutFeedback, Text } from "react-native";
+import { View, TouchableWithoutFeedback, Text, StyleSheet } from "react-native";
 import React, { useState } from "react";
 import { PositionIndicator } from "@components/atoms";
-import { RestaurantWrapperFetchedDataType, RootStackParamList, restaurantDataType } from "@types";
+import {
+  RestaurantWrapperFetchedDataType,
+  RootStackParamList,
+  restaurantDataType,
+} from "@types";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import RestaurantWrapperImageContainer from "./RestaurantWrapperImageContainer";
 import {
@@ -25,7 +29,8 @@ export default function RestaurantWrapper({
 }: {
   restaurantId: string;
 }) {
-  const [restaurant, setRestaurant] = React.useState<RestaurantWrapperFetchedDataType>();
+  const [restaurant, setRestaurant] =
+    React.useState<RestaurantWrapperFetchedDataType>();
 
   React.useEffect(() => {
     fetchRestaurantById(restaurantId).then((res) => {
@@ -60,10 +65,13 @@ export default function RestaurantWrapper({
     return (
       <TouchableWithoutFeedback
         onPress={() =>
-          navigation.navigate("RestaurantScreen", {restaurant:restaurant,restaurantId})
+          navigation.navigate("RestaurantScreen", {
+            restaurant: restaurant,
+            restaurantId,
+          })
         }
       >
-        <View className="border rounded-3xl py-[8px] items-center overflow-hidden border-color3 mx-0 mb-4">
+        <View style={styles.shadow} className="borde rounded-3xl py-[8px] items-center overflow-hidden bg-color1 border-color3 mx-0 mb-4">
           <RestaurantWrapperImageContainer
             controlImageIndex={changeImageIndex}
             images={[restaurant.images[0].url]}
@@ -93,3 +101,17 @@ export default function RestaurantWrapper({
     );
   return <RestaurantWrapperSkeleton />;
 }
+
+const styles = StyleSheet.create({
+  shadow: {
+      shadowColor: "#cacaca",
+      shadowOffset: {
+          width: 0,
+          height: 1,
+      },
+      shadowOpacity: 0.27,
+      shadowRadius: 4.65,
+
+      elevation: 2,
+  }
+})
