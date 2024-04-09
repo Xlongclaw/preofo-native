@@ -11,12 +11,12 @@ import React from 'react'
  */
 export default function RestaurantPreparationTimeContainer({minprepTime,maxPrepTime}:{minprepTime:number,maxPrepTime:number}) {
   return (
-    <View className="flex-row items-center space-x-1 mt-2">
+    <View className="flex-row items-center space-x-1 mt-1">
         <Image
           className="w-[12px] h-[12px]"
           source={require("@images/time.png")}
         />
-        <Text className="text-[11px] font-bold text-color2/40">
+        <Text className="text-[13px] font-bold text-color2/40">
           {minprepTime} - {maxPrepTime} min
         </Text>
       </View>

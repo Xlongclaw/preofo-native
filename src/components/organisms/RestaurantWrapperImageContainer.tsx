@@ -31,7 +31,7 @@ export default function RestaurantWrapperImageContainer({
   };
 
   return (
-    <View className="overflow-hidden w-[89vw] rounded-[27px] relative">
+    <View className="overflow-hidden w-[92vw] rounded-[16px] relative">
       <ImageSlider
       height={180}
         controlImageIndex={changeImageIndex}

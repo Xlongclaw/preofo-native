@@ -17,10 +17,10 @@ export default function RestaurantWrapperDetailsContainer({
 }) {
   return (
     <View className=" flex-col w-2/3">
-      <Text className="text-base font-bold">{restaurant.name}</Text>
-      <View className="text-[10px] flex-row flex-wrap">
+      <Text className="text-xl font-bold">{restaurant.name}</Text>
+      <View className=" flex-row flex-wrap">
         {restaurant.restaurantTags.map((tag, i) => (
-          <Text className="font-bold text-color2/40 text-[11px]" key={i}>
+          <Text className="font-bold text-color6 text-[13px]" key={i}>
             {i<3 && tag}
             {i<2 && restaurant.restaurantTags.length - 1 !== i && " • "}
           </Text>
