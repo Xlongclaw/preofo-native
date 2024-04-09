@@ -1,6 +1,6 @@
 import SERVER_ENDPOINTS from "constants/SERVER_ENDPOINTS";
 
-const addDish = async ({
+const addOrder = async ({
   categoryId,
   restaurantId,
   dish,
@@ -41,4 +41,4 @@ const addDish = async ({
   }
 };
 
-export default addDish;
+export default addOrder;

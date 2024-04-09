@@ -42,7 +42,7 @@ export default function AppLoadingScreen({ navigation, route }: Props) {
       <View className="space-y-48 mt-56">
         <View className="items-center">
           <Text className=" text-6xl font-extrabold pt-2">Preofo</Text>
-          <Text className=" text-xl font-extrabold ">PARTNER</Text>
+          {/* <Text className=" text-xl font-extrabold ">PARTNER</Text> */}
         </View>
         <ActivityIndicator size={40} color={"#000"} />
       </View>

@@ -61,7 +61,7 @@ export default function FoodItemWrapper({
           </View>
           <Text className="font-bold text-color2/90">{foodItem.name}</Text>
           <Text
-            numberOfLines={5}
+            numberOfLines={4}
             className="text-[11px] font-semibold text-color2/40"
           >
             {foodItem.description}

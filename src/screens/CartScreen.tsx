@@ -28,7 +28,6 @@ export default function CartScreen({ navigation, route }: NavigationProps) {
         restaurantId: route.params.restaurant._id,
         userToken: token!,
       }).then((res) => {
-        console.log(res.basket);
         setOrderData(res.basket[0]);
       }).catch((err)=>{
         console.log(err);

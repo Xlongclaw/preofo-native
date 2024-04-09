@@ -21,7 +21,11 @@
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.xlongclaw.preofo"
     },
     "web": {
       "favicon": "./src/assets/images/favicon.png"
@@ -37,6 +41,17 @@
         }
       ],
       "expo-secure-store"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "8df20dd5-58c1-4e48-8e17-dc7f602702ed"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/8df20dd5-58c1-4e48-8e17-dc7f602702ed"
+    }
   }
 }
