@@ -38,7 +38,8 @@
     "react-native-toast-message": "^2.2.0",
     "expo-secure-store": "~12.8.1",
     "expo-updates": "~0.24.12",
-    "expo-dev-client": "~3.3.11"
+    "expo-dev-client": "~3.3.11",
+    "react-native-svg": "14.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

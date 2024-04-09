@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
 import React from "react";
 import { RestaurantWrapper } from "@components/organisms";
 import { useFetch } from "@hooks";
@@ -25,10 +25,13 @@ export default function RestaurantContainer() {
   if (restautantIds)
     return (
       <View className="mr-2 ml-2 mb-28">
-        <TextHeading
-          title="RESTAURANTS"
-          subtitle="Top Quality food just one click away."
-        />
+        <View className="flex-row items-center justify-between mx-3 my-3">
+          <TextHeading
+            title="RESTAURANTS"
+            subtitle="Top Quality food just one click away."
+          />
+          <Image className="bg-color6/10 w-10 h-10 rounded-xl" source={require('@images/menu-bar.svg')} />
+        </View>
         {restautantIds.map((restaurantId) => (
           /**
            * Rendering all restaurants through sending restaurantIds to Restaurant Wrappers
@@ -42,7 +45,6 @@ export default function RestaurantContainer() {
           <RestaurantWrapperSkeleton />
           <RestaurantWrapperSkeleton />
         </> */}
-        
       </View>
     );
   else return <Text>LOADING</Text>;

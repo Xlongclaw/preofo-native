@@ -9,8 +9,8 @@ import React from "react";
  */
 export default function TextHeading({ title ,subtitle}: { title: string,subtitle?:string }) {
   return (
-    <View className=" px-6 items-center mt-5 mb-5 mr-2">
-      <Text className="text-base justify-center font-black text-color2/50">
+    <View className="">
+      <Text className="text-base font-black text-color2/50">
         {title}
       </Text>
       <Text className="text-xs font-bold text-color2/30">

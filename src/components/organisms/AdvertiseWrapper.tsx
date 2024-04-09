@@ -51,9 +51,9 @@ export default function AdvertiseWrapper() {
     if (advertisements)
       return (
         <View className="pr-2">
-          <View className="rounded-[25px] overflow-hidden mb-4 mt-2">
+          <View className="rounded-[0px] overflow-hidden mb-4 mt-2 ml-3 mr-1">
             <ImageSlider
-              height={160}
+              height={180}
               controlImageIndex={controlImageIndex}
               images={advertisementImagesArray}
             />
