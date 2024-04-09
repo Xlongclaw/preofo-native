@@ -63,14 +63,14 @@ export default function RestaurantWrapper({
           navigation.navigate("RestaurantScreen", {restaurant:restaurant,restaurantId})
         }
       >
-        <View className="border rounded-[40px] py-[15px] items-center overflow-hidden border-color3 mx-0 mb-4">
+        <View className="border rounded-3xl py-[8px] items-center overflow-hidden border-color3 mx-0 mb-4">
           <RestaurantWrapperImageContainer
             controlImageIndex={changeImageIndex}
             images={[restaurant.images[0].url]}
           />
 
           {/* Bottom container of restaurant Wrapper */}
-          <View className=" flex-row justify-between w-[100%] px-6 mt-4">
+          <View className=" flex-row justify-between w-[100%] px-6 mt-2">
             {/* Left Bottom container of restaurant wrapper that displays NAME,
           TAGS, PREPARATION TIME for a particular Restaurant */}
             <RestaurantWrapperDetailsContainer restaurant={restaurant} />

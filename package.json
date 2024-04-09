@@ -37,7 +37,8 @@
     "react-native-swiper": "^1.6.0",
     "react-native-toast-message": "^2.2.0",
     "expo-secure-store": "~12.8.1",
-    "expo-updates": "~0.24.12"
+    "expo-updates": "~0.24.12",
+    "expo-dev-client": "~3.3.11"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

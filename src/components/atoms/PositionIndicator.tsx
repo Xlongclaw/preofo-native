@@ -15,7 +15,7 @@ export default function PositionIndicator({
           key={`DOT_${i}`}
           className={` rounded-xl ${
             index == i
-              ? "w-[12px] h-[5px] bg-color2"
+              ? "w-[12px] h-[5px] bg-color6"
               : "w-[5px] h-[5px] bg-color3"
           } `}
         ></View>
