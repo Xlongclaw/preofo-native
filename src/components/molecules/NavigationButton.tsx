@@ -15,7 +15,7 @@ export default function NavigationButton({
     <TouchableOpacity
       activeOpacity={0.9}
       onPress={() => navigation.navigate(data.goto)}
-      className={`flex-row items-center ${
+      className={`flex-row items-center justify-center w-1/2 ${
         selected ? "bg-color2" : "border border-color3/20"
       }
      py-3 rounded-[12px] ${selected ? "px-8" : "px-3"}  space-x-2`}
@@ -27,7 +27,7 @@ export default function NavigationButton({
       )}
 
       <Text
-        className={`text-xs mt-1 font-medium text-white ${
+        className={`text-sm font-semibold text-white ${
           selected ? "text-white" : "text-color2"
         }`}
       >

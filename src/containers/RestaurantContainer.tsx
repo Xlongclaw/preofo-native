@@ -30,7 +30,7 @@ export default function RestaurantContainer() {
             title="RESTAURANTS"
             subtitle="Top Quality food just one click away."
           />
-          <Image className="bg-color6/20 w-10 h-10 rounded-xl" source={require('@images/menu-bar.svg')} />
+          <Image className="bg-color6/10 w-10 h-10 rounded-xl" source={require('@images/menu-bar.svg')} />
         </View>
         {restautantIds.map((restaurantId) => (
           /**

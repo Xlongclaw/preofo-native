@@ -71,7 +71,7 @@ export default function RestaurantWrapper({
           })
         }
       >
-        <View style={styles.shadow} className="borde rounded-3xl py-[8px] items-center overflow-hidden bg-color1 border-color3 mx-0 mb-4">
+        <View style={styles.shadow} className="borde rounded-3xl py-[8px] items-center overflow-hidden bg-color1 border-color3 mx-0 mb-3">
           <RestaurantWrapperImageContainer
             controlImageIndex={changeImageIndex}
             images={[restaurant.images[0].url]}
