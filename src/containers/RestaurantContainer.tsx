@@ -24,7 +24,7 @@ export default function RestaurantContainer() {
    */
   if (restautantIds)
     return (
-      <View className="mr-2 mb-28">
+      <View className="mr-2 ml-2 mb-28">
         <TextHeading
           title="RESTAURANTS"
           subtitle="Top Quality food just one click away."
