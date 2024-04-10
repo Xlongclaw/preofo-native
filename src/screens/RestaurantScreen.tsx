@@ -35,7 +35,7 @@ export default function RestaurantScreen({
   };
 
   return (
-    <View style={{ paddingTop: StatusBar.currentHeight }} className={`mr-2`}>
+    <View style={{ paddingTop: StatusBar.currentHeight }}>
       <RestaurantHeader
         data={route.params.restaurant}
         scrollPosition={scrollPosition}

@@ -1,4 +1,4 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, StyleSheet } from "react-native";
 import React from "react";
 import FoodItemWrapperCounter from "@components/molecules/FoodItemWrapperCounter";
 import fetchDishById from "utils/fetchDishById";
@@ -29,7 +29,7 @@ export default function FoodItemWrapper({
 
   if (foodItem)
     return (
-      <View className="border relative w-full rounded-[40px] flex-row justify-between items-center border-color3 p-2 my-3">
+      <View style={styles.shadow} className="borde relative w-full rounded-[40px] flex-row bg-white justify-between items-center border-color3 p-2 my-3">
         <View className="max-w-[50%] pl-4 space-y-1">
           <View className="flex-row gap-2">
             {foodItem.nonVeg ? (
@@ -82,3 +82,17 @@ export default function FoodItemWrapper({
     );
   return <FoodItemWrapperSkeleton />;
 }
+
+const styles = StyleSheet.create({
+  shadow: {
+      shadowColor: "#ccc",
+      shadowOffset: {
+          width: 0,
+          height: 0,
+      },
+      shadowOpacity: 0.27,
+      shadowRadius: 4.65,
+
+      elevation: 6,
+  }
+})

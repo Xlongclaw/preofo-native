@@ -7,7 +7,7 @@ import { navigationDataType } from "@types";
 export default function NavigationBar() {
   const [selected, setSelected] = useState(0);
   return (
-    <View className=" flex-row  rounded-t-[36px] justify-end left-0 bottom-[89px] bg-white w-[100vw]">
+    <View className=" flex-row  rounded-t-[36px] justify-end left-0 bottom-[135px]  bg-white w-[100vw]">
       <View
         className="flex-row items-center px-3 w-full py-2 
        bg-color5  rounded-[17px]"

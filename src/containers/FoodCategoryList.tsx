@@ -27,7 +27,7 @@ export default function FoodCategoryList({
 
 
     return (
-      <View className="flex-col ml-2 border-b border-color3/40 pb-2">
+      <View className="flex-col mx-2 border-b border-color3/40 pb-2">
         <TouchableOpacity
           onPress={() => setExpand(!expand)}
           className="flex-row justify-between mx-4 items-center"
