@@ -9,6 +9,7 @@ import { AdvertisementDataType } from "@types";
 import { AdvertisementWrapperSkeleton } from "@components/skeletons";
 import ImageSlider from "@components/organisms/ImageSlider";
 import fetchAdvertisements from "utils/fetchAdvertisements";
+import AdvPositionIndicator from "@components/atoms/AdvPositionIndicator";
 
 /**
  * This component is a display a group of food advertisement
@@ -50,15 +51,15 @@ export default function AdvertiseWrapper() {
 
     if (advertisements)
       return (
-        <View className="pr-2">
-          <View className="rounded-[0px] overflow-hidden mb-4 mt-2 ml-3 mr-1">
+        <View className="pr-2 relative">
+          <View className="rounded-[15px] overflow-hidden mb-4 mt-0 ml-3 mr-1">
             <ImageSlider
-              height={180}
+              height={120}
               controlImageIndex={controlImageIndex}
               images={advertisementImagesArray}
             />
           </View>
-          <PositionIndicator
+          <AdvPositionIndicator
             index={currentAdvertisementIndex}
             size={advertisementImagesArray.length}
           />

@@ -25,12 +25,16 @@ export default function RestaurantContainer() {
   if (restautantIds)
     return (
       <View className="mr-2 ml-2 mb-28">
-        <View className="flex-row items-center justify-between mx-3 my-3">
+        <View className="flex-row items-center justify-between ml-3 mr-4 mb-2">
           <TextHeading
             title="RESTAURANTS"
             subtitle="Top Quality food just one click away."
           />
-          <Image className="bg-color6/10 w-10 h-10 rounded-xl" source={require('@images/menu-bar.svg')} />
+          <View className="gap-1 items-end" >
+            <View className="bg-color2 w-6 h-[3px]"></View>
+            <View className="bg-color2 w-6 h-[3px]"></View>
+            <View className="bg-color2 w-3 h-[3px]"></View>
+          </View>
         </View>
         {restautantIds.map((restaurantId) => (
           /**
