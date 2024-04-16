@@ -1,3 +1,4 @@
+import { EXPO_PUBLIC_SERVER_TEST_ADDRESS } from "constants/secrets";
 import passwordValidation from "./passwordValidation";
 import SERVER_ENDPOINTS from "constants/SERVER_ENDPOINTS";
 
@@ -16,7 +17,7 @@ const submitUserData = async ({
   // restaurantData
 }: submitDataPropType) => {
   if (passwordValidation(password, confirmPassword)) {
-    const res = await fetch(`${process.env.EXPO_PUBLIC_SERVER_TEST_ADDRESS}/${SERVER_ENDPOINTS.ADD_USER_POST}`, {
+    const res = await fetch(`${EXPO_PUBLIC_SERVER_TEST_ADDRESS}/${SERVER_ENDPOINTS.ADD_USER_POST}`, {
       method: "POST",
       body: JSON.stringify({
         name,
