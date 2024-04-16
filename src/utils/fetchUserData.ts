@@ -1,9 +1,10 @@
 import SERVER_ENDPOINTS from "constants/SERVER_ENDPOINTS";
+import { EXPO_PUBLIC_SERVER_TEST_ADDRESS } from "constants/secrets";
 
 const fetchUserData = async (userToken: string) => {
   try {
     const data = await fetch(
-      `${process.env.EXPO_PUBLIC_SERVER_TEST_ADDRESS}/${SERVER_ENDPOINTS.GET_USER_FROM_TOKEN_GET}?userToken=${userToken}`,
+      `${EXPO_PUBLIC_SERVER_TEST_ADDRESS}/${SERVER_ENDPOINTS.GET_USER_FROM_TOKEN_GET}?userToken=${userToken}`,
       {
         method: "GET",
       }

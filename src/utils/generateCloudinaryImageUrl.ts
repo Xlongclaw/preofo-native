@@ -1,3 +1,5 @@
+import { EXPO_PUBLIC_CLOUD_NAME } from "constants/secrets";
+
 const generateCloudinaryImageUrl = async (uri: string) => {
   let file: any = {
     uri: uri,
@@ -10,7 +12,7 @@ const generateCloudinaryImageUrl = async (uri: string) => {
   data.append("cloud_name", `${process.env.CLOUD_NAME}`);
 
   const res = await fetch(
-    `http://api.cloudinary.com/v1_1/${process.env.EXPO_PUBLIC_CLOUD_NAME}/image/upload`,
+    `http://api.cloudinary.com/v1_1/${EXPO_PUBLIC_CLOUD_NAME}/image/upload`,
     {
       method: "POST",
       body: data,

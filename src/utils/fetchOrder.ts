@@ -1,7 +1,9 @@
+import { EXPO_PUBLIC_SERVER_TEST_ADDRESS } from "constants/secrets";
+
 const fetchOrder = async ({restaurantId,userToken}:{restaurantId:string,userToken:string}) => {
   try {
     const category = await fetch(
-      `${process.env.EXPO_PUBLIC_SERVER_TEST_ADDRESS}/user/basket?restaurantId=${restaurantId}&userToken=${userToken}`
+      `${EXPO_PUBLIC_SERVER_TEST_ADDRESS}/user/basket?restaurantId=${restaurantId}&userToken=${userToken}`
     );
     const JSONData = await category.json();
     return JSONData;

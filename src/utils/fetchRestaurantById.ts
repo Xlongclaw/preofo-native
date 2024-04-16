@@ -1,7 +1,9 @@
+import { EXPO_PUBLIC_SERVER_TEST_ADDRESS } from "constants/secrets";
+
 const fetchRestaurantById = async (restaurantId: string) => {
   try {
     const restaurant = await fetch(
-      `${process.env.EXPO_PUBLIC_SERVER_TEST_ADDRESS}/restaurant?_id=${restaurantId}`
+      `${EXPO_PUBLIC_SERVER_TEST_ADDRESS}/restaurant?_id=${restaurantId}`
     );
     const JSONData = await restaurant.json();
     return JSONData;

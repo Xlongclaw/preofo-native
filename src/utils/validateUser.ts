@@ -1,4 +1,5 @@
 import SERVER_ENDPOINTS from "constants/SERVER_ENDPOINTS";
+import { EXPO_PUBLIC_SERVER_TEST_ADDRESS } from "constants/secrets";
 
 /**
  * This functions sends an AJAX call to the server to check whether 
@@ -10,7 +11,7 @@ import SERVER_ENDPOINTS from "constants/SERVER_ENDPOINTS";
 const validateUser = async (phoneNumber:string,otp:string) => {
   
   const data = await fetch(
-    `${process.env.EXPO_PUBLIC_SERVER_TEST_ADDRESS}/${SERVER_ENDPOINTS.VALIDATE_OTP_GET}?phoneNumber=${phoneNumber}&otp=${otp}&clientType=USER`
+    `${EXPO_PUBLIC_SERVER_TEST_ADDRESS}/${SERVER_ENDPOINTS.VALIDATE_OTP_GET}?phoneNumber=${phoneNumber}&otp=${otp}&clientType=USER`
   )
     return data.json()
 };
